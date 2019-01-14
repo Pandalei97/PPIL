@@ -123,6 +123,7 @@
     <ClInclude Include="Groupe.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="Segment.h" />
+    <ClInclude Include="SingletonConnexion.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
   </ItemGroup>
@@ -135,6 +136,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Segment.cpp" />
+    <ClCompile Include="SingletonConnexion.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
   </ItemGroup>
