@@ -23,7 +23,7 @@ public:
 	virtual ~Forme();
 
 	Couleur getCouleur()const;
-	void setCouleur(const string & couleur);
+	virtual void setCouleur(const string & couleur);
 	bool estMarquee();
 	void setMarquee(bool marquee);
 

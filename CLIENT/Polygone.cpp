@@ -94,7 +94,7 @@ void Polygone::supprimer(int indice)
 	m_tabPoints.erase(m_tabPoints.begin() + indice);
 }
 
-//Fonctions à implémentées depuis Forme
+//Fonctions à implémenter depuis Forme
 const double Polygone::getAire() const {
 	//S = 1/2 *(Somme(xi*yi+1 - xi+1*yi)) <-- déterminant
 	double somme = m_tabPoints[m_tabPoints.size() - 1].determinant(m_tabPoints[0]);

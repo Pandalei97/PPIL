@@ -134,7 +134,7 @@ int main(int argc, char** argv) {
 	}
 
 	cout << endl << endl;
-	// Teste classe polygone
+	// Teste classe groupe
 	Groupe g1(RED);
 	Forme *cerc5 = new Cercle(Vecteur2D(53,54),35,BLUE);
 	Forme *s6 = new Segment(Vecteur2D(45,63),  Vecteur2D(66,95), BLUE);
@@ -143,17 +143,19 @@ int main(int argc, char** argv) {
 	Forme *t7 = new Triangle(Vecteur2D(113,214),Vecteur2D(141,164),Vecteur2D(118,115),GREEN);
 	cout << *cerc5 << endl;
 	g1 = g1 + cerc5;
-	cout << g1 << endl;
+	cout << "g1:(Avant modif couleur)" << g1 << endl;
 	Groupe g2(BLACK);
 	g2 = g2 + s6 + t6;
 	g1 = g1 + &g2;
 	cout << g1 << endl;
-	try{
 
+	g1.setCouleur(GREEN);
+	cout << "g1:(apres modif couleur)" << g1 << endl;
+
+	try{
 		g2 = g2 + t6;
 		cout << g2 << endl;
 	}
-
 	catch (Exception e)
 	{
 		cout << e << endl;

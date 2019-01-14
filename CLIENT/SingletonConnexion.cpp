@@ -1,9 +1,12 @@
 #include "SingletonConnexion.h"
+#pragma warning(disable:4996) 
+
 
 SingletonConnexion * SingletonConnexion::instance = NULL;
 
 SingletonConnexion::SingletonConnexion() {
 	sock = NULL;
+	initialiserConnexion();
 }
 SingletonConnexion::~SingletonConnexion()
 {}
@@ -29,35 +32,57 @@ bool SingletonConnexion::initialiserConnexion() {
 	}
 	try {
 		int r;
+		// structure contenant les données de lalibrairie winsock à initialiser
 		WSADATA wsaData;
+
+		// MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
 		r = WSAStartup(MAKEWORD(2, 0), &wsaData);
 		if (r)
 			throw Exception("L'initialisation a echoue");
+
 		cout << "Initialisation de winsock effectuee" << endl;
-		sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+		//Initialisation du socket
+		int familleAdresses = AF_INET;         // IPv4
+		int typeSocket = SOCK_STREAM;           // mode connecté TCP
+		int protocole = IPPROTO_TCP;            // protocole.
+
+		sock = socket(familleAdresses, typeSocket, protocole);
+
 		if (sock == INVALID_SOCKET) {
 			ostringstream oss;
 			oss << "la creation du socket a echoue : code d'Exception = " << WSAGetLastError() << endl;
 			throw Exception(oss.str().c_str());
 		}
 		cout << "Socket cree" << endl;
+
+		//Information du serveur
 		string adresseServeur;
 		short portServeur;
+
+		//Saisir l'adresse IP et le port
 		cout << "tapez l'adresse IP du serveur de dessin : " << endl;
 		cin >> adresseServeur;
 		cout << "tapez le port du serveur du serveur de dessin : " << endl;
 		cin >> portServeur;
+
 		sockaddr.sin_family = AF_INET;
+
+		// inet_addr() convertit de l'ASCII en entier
+		// il faut desavtiver #pragma warning(disable:4996)  
 		sockaddr.sin_addr.s_addr = inet_addr(adresseServeur.c_str());
+
 		sockaddr.sin_port = htons(portServeur);
+
+		//Connexion
 		r = connect(sock, (SOCKADDR *)&sockaddr, sizeof(sockaddr));
 		if (r == SOCKET_ERROR)
 			throw Exception("La connexion a echoue");
 		cout << "Connexion au serveur de dessin effectuee" << endl;
 		return true;
 	}
-	catch (Exception Exception) {
-		cerr << Exception << endl;
+	catch (Exception e) {
+		cerr << e << endl;
 		return false;
 	}
 }
@@ -88,7 +113,7 @@ void SingletonConnexion::envoyerRequete(const string & req) {
 		throw Exception("Echec de l'envoi de la requête");
 }
 
-bool SingletonConnexion::serveurATraiterRequete() {
+bool SingletonConnexion::serveurATraiteRequete() {
 	char t[10];
 	recv(sock, t, 10, 0);
 	/*le serveur renvoie '1' si la requete précédente

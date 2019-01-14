@@ -24,6 +24,8 @@ bool Triangle::verifPoints(const Vecteur2D & P1, const Vecteur2D & P2, const Vec
 	//Les points doivent être différents
 	if ((P1 == P2) || (P2 == P3) || (P1 == P3))
 		return false;
+
+
 	double pente1 = (P2.getY() - P1.getY()) / (P2.getX() - P1.getX());
 	double pente2 = (P3.getY() - P1.getY()) / (P3.getX() - P1.getX());
 

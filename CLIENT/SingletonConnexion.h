@@ -16,6 +16,7 @@ using namespace std;
 class SingletonConnexion {
 private:
 	SOCKET sock;
+	//Structures for handling internet addresses
 	SOCKADDR_IN sockaddr;
 
 	static SingletonConnexion *instance;  /*! \a  instance qui est de type SingletonConnexion *, unique instance du singleton. */
@@ -31,7 +32,7 @@ private:
 	*/
 	~SingletonConnexion();
 public:
-	//méthode qui retourne l'instance unique (la créer si non crée et la retourne si déjà créée)
+	//méthode qui retourne l'instance unique (la créer si non créée et la retourne si déjà créée)
 	static SingletonConnexion *getInstance();
 	//méthode pour détruire l'instance
 	static void killInstance();
@@ -42,5 +43,5 @@ public:
 	//envoie d'une requete vers le serveur connecté
 	void envoyerRequete(const string &);
 	//métohde qui attend la réponse d'un serveur (bloquant)
-	bool serveurATraiterRequete();
+	bool serveurATraiteRequete();
 };

@@ -11,7 +11,7 @@ public:
 	~Groupe();
 
 	int getNbFormes() const;
-
+	void setCouleur(const string& couleur);
 	operator string() const;
 	bool operator==(const  Groupe &obj) const;
 	bool operator != (const Groupe &obj) const;

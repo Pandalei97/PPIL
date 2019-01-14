@@ -21,7 +21,7 @@ public:
 	bool operator!= (const Segment &objet) const;
 	const Segment & operator = (const Segment&obj);
 
-	//Fonctions à implémentées depuis Forme
+	//Fonctions à implémenter depuis Forme
 	const double getAire() const;
 	Forme * clone() const;
 	void homothetie(const  Vecteur2D & vectHomotethie, double k);

@@ -15,7 +15,12 @@ int Groupe::getNbFormes() const {
 	return m_tabFormes.size();
 }
 
-
+void Groupe::setCouleur(const string& couleur) {
+	Forme::setCouleur(couleur);
+	for (int i = 0; i < m_tabFormes.size(); i++) {
+		m_tabFormes[i]->setCouleur(couleur);
+	}
+}
 Groupe::operator string() const
 {
 	ostringstream oss;

@@ -1,5 +1,3 @@
-﻿  Groupe.cpp
-c:\users\yilei pan\desktop\ppil_final\ppil\client\groupe.cpp(15): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
-  main.cpp
-  Génération de code en cours...
+﻿  SingletonConnexion.cpp
+c:\users\yilei pan\desktop\ppil_final\ppil\client\singletonconnexion.cpp(107): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
   CLIENT.vcxproj -> C:\Users\Yilei Pan\Desktop\PPIL_Final\PPIL\CLIENT\x64\Debug\CLIENT.exe
