@@ -7,7 +7,6 @@
 #define HAUTEUR "700"
 
 /** couleurs*/
-
 const std::string DEFAULT = "unknown";
 const std::string BLACK = "black";
 const std::string BLUE = "blue";
