@@ -23,6 +23,7 @@ const T operator-(const T& u, const T& v) {
 	return u + -v;
 }
 
+
 class Vecteur2D {
 	double m_x, m_y;
 public:
@@ -44,7 +45,7 @@ public:
 	/**
 	* \ brief Destructeur.
 	*/
-	virtual ~Vecteur2D() {}
+	virtual ~Vecteur2D();
 
 	/**
 	* \ brief getter du champ \a x.
@@ -70,7 +71,7 @@ public:
 	* \details modifie la valeur du champ \a y.
 	* \param y.
 	*/
-	void setY(const double &);
+	void setY(const double &y);
 
 	/**
 	* \ brief Opérateur d'addition entre deux vecteurs.
@@ -89,11 +90,6 @@ public:
 	**/
 	const Vecteur2D operator - () const;
 
-	/**
-	* \ brief Operateur de conversion Vecteur2D ===> string.
-	* \details convertit les coordonnées du vecteur en des chaines de caractères.
-	*/
-	operator string() const;
 
 	/**
 	* \ brief Test d'égalité avec un autre vecteur.
@@ -109,10 +105,7 @@ public:
 	* \param objet.
 	* \return \e bool true si inégalité et false sinon.
 	*/
-	bool operator != (const Vecteur2D&  v) const
-	{
-		return !(*this == v);
-	}
+	bool operator != (const Vecteur2D&  v) const;
 
 	/**
 	* \ brief Opérateur d'affectation.
@@ -121,6 +114,13 @@ public:
 	* \return \e Vecteur2D résultat de l'affectaion.
 	*/
 	const Vecteur2D operator = (const Vecteur2D & objet);
+
+
+	/**
+	* \ brief Operateur de conversion Vecteur2D ===> string.
+	* \details convertit les coordonnées du vecteur en des chaines de caractères.
+	*/
+	operator string() const;
 
 	/**
 	* \ brief Surcharge l'affichage dans un flux.
@@ -131,11 +131,11 @@ public:
 	friend ostream & operator << (ostream & os, const Vecteur2D & u);
 
 	/**
-	* \ brief Une homothétie est définie par un point et un rapport de grandeurs vectorielles constant (k).
+	* \ brief Une homothétie est définie par un point invariant et un rapport de grandeurs vectorielles constant (k).
 	*\param vectHomotethie, k.
 	* Modifie le vecteur.
 	*/
-	void homothetie(const Vecteur2D & vectHomotethie, double k);
+	void homothetie(const Vecteur2D & pointInvariant, double k);
 
 
 	/**
@@ -152,5 +152,15 @@ public:
 	*/
 	void rotation(const Vecteur2D & vectCentre, double angle);
 
-
+	/**
+	* \ brief Calcul du déterminant(u , v), ici le déterminant réprésente l'aire du parallélogramme formé par u et v.
+	*\param v.
+	* \return \e double det(u, v).
+	*/
+	const double determinant(const Vecteur2D &) const;
 };
+
+// Permet d'effectuer l'opération " reel * Vecteur"
+inline const Vecteur2D operator* (const double a, const Vecteur2D & v) {
+	return v * a;
+}

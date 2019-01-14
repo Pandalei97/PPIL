@@ -115,6 +115,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cercle.h" />
+    <ClInclude Include="Constantes.h" />
+    <ClInclude Include="Couleur.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="Forme.h" />
+    <ClInclude Include="Groupe.h" />
+    <ClInclude Include="Polygone.h" />
+    <ClInclude Include="Segment.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Vecteur2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="Couleur.cpp" />
+    <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="Forme.cpp" />
+    <ClCompile Include="Groupe.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Polygone.cpp" />
+    <ClCompile Include="Segment.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="Vecteur2D.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

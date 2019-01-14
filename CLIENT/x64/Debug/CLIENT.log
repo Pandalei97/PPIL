@@ -1,0 +1,5 @@
+﻿  Groupe.cpp
+c:\users\yilei pan\desktop\ppil_final\ppil\client\groupe.cpp(15): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
+  main.cpp
+  Génération de code en cours...
+  CLIENT.vcxproj -> C:\Users\Yilei Pan\Desktop\PPIL_Final\PPIL\CLIENT\x64\Debug\CLIENT.exe
