@@ -23,25 +23,48 @@ private:
 
 
 	/**
-	*	\brief constructeur privé.
+	*	\brief Constructeur par défaut privé
 	*/
 	SingletonConnexion();
 
 	/**
-	*	\brief destructeur privé.
+	*	\brief Destructeur
 	*/
 	~SingletonConnexion();
 public:
-	//méthode qui retourne l'instance unique (la créer si non créée et la retourne si déjà créée)
+
+	/**
+	* \brief Retourne une instance unique
+	* \details Va créer l'instance si celle-ci n'existe pas ou bien juste la retourner dans le cas contraire
+	* \return SingletonConnexion* Pointeur sur l'instance unique
+	*/
 	static SingletonConnexion *getInstance();
-	//méthode pour détruire l'instance
+
+	/**
+	* \brief Ferme l'instance unique en cours
+	*/
 	static void killInstance();
-	//méthode pour initialiser la connexion vers un serveur
+
+	/**
+	* \brief Initialise la connexion vers le serveur
+	* \return bool Booléen vrai si la connexion est réussie, faux sinon
+	*/
 	bool initialiserConnexion();
-	//fermer une connexion
+
+	/**
+	* \brief Ferme la connexion vers le serveur
+	*/
 	void fermerConnexion();
-	//envoie d'une requete vers le serveur connecté
-	void envoyerRequete(const string &);
-	//métohde qui attend la réponse d'un serveur (bloquant)
+
+	/**
+	* \brief Envoie une requête au serveur
+	* \param str La chaine de caractère à envoyer au serveur
+	*/
+	void envoyerRequete(const string &str);
+
+	/**
+	* \brief Teste si une requête a été traitée par le serveur
+	* \return bool Booléen vrai si la requête a été traitée, faux sinon
+	*/
 	bool serveurATraiteRequete();
 };

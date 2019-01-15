@@ -1,3 +1,7 @@
+/**
+* \file Triangle.h
+* \brief Classe triangle qui représente une forme spéciale (triangle)
+*/
 #pragma once
 #include "Forme.h"
 using namespace std;

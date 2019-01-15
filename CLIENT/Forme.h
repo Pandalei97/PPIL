@@ -1,3 +1,7 @@
+/**
+* \file Forme.h
+* \brief Classe forme qui représente une forme
+*/
 #pragma once
 
 #include <iostream>

@@ -1,3 +1,7 @@
+/**
+* \file Cercle.h
+* \brief Classe cercle qui représente une forme spéciale (cercle)
+*/
 #pragma once
 
 #include "Forme.h"

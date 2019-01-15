@@ -1,6 +1,6 @@
 /**
 * \file Exception.h
-* \brief Exception.
+* \brief Représente une exception
 */
 
 #pragma once

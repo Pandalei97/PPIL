@@ -1,3 +1,7 @@
+/**
+* \file Couleur.h
+* \brief Classe couleur qui représente la couleur d'une forme/groupe
+*/
 #pragma once
 
 #include <iostream>

@@ -1,7 +1,6 @@
 /**
 * \file Vecteur2D.h
-* \brief  Un vecteur ici est un point, c'est une couple des réels (x,y) dans un plan
-* \details Cette classe répresente un point dans une forme.
+* \brief  Un vecteur ici est un point, c'est une couple des réels (x,y) dans un plan, représente un point dans une forme
 */
 
 #pragma once

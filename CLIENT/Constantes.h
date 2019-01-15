@@ -1,3 +1,7 @@
+/**
+* \file Constantes.h
+* \brief Fichier qui contient toutes les cpnstantes nécessaires au programme
+*/
 #pragma once
 #include <iostream>
 #include <string>
