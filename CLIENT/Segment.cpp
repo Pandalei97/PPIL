@@ -83,6 +83,6 @@ ostream & Segment::print(ostream & flux) const {
 	return flux << (string)(*this);
 }
 
-void Segment::accepteSauvegarder(VisiteurSauvTXT *v)const {
+void Segment::accepteSauvegarder(const VisiteurSauvTXT *v)const {
 	v->visite(this);
 }

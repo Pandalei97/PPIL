@@ -130,5 +130,5 @@ public:
 	*/
 	ostream & print(ostream & flux) const;
 
-	void accepteSauvegarder(VisiteurSauvTXT *v)const;
+	void accepteSauvegarder(const VisiteurSauvTXT *v)const;
 };

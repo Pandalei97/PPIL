@@ -36,6 +36,12 @@ public:
 	~Polygone();
 
 	/**
+	* \brief Getter pour savoir le nombre de points dans le polygone
+	* \return int le bombre de points
+	*/
+	int getNbPoints() const;
+
+	/**
 	* \brief Vérifie si tous les points sont correctement placés
 	* \param tabPoints Vecteur de points
 	* \return bool Booléen vrai si les points sont bien placés, faux sinon
@@ -127,5 +133,5 @@ public:
 	*/
 	ostream & print(ostream & flux) const;
 
-	void accepteSauvegarder(VisiteurSauvTXT *v)const;
+	void accepteSauvegarder(const VisiteurSauvTXT *v)const;
 };

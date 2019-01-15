@@ -77,6 +77,6 @@ ostream & Cercle::print(ostream & flux) const {
 	return flux << (string)(*this);
 }
 
-void Cercle::accepteSauvegarder(VisiteurSauvTXT *v)const {
+void Cercle::accepteSauvegarder(const VisiteurSauvTXT *v)const {
 	v->visite(this);
 }

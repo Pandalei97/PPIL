@@ -13,7 +13,7 @@ void Forme::setCouleur(const string & couleur) {
 	m_couleur.setCouleur(couleur);
 }
 
-bool Forme::estMarquee() {
+bool Forme::estMarquee() const{
 	return m_marquee;
 }
 

@@ -118,6 +118,6 @@ ostream & Triangle::print(ostream & flux) const {
 	return flux << (string)(*this);
 }
 
-void Triangle::accepteSauvegarder(VisiteurSauvTXT *v)const {
+void Triangle::accepteSauvegarder(const VisiteurSauvTXT *v)const {
 	v->visite(this);
 }

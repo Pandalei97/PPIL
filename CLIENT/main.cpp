@@ -7,6 +7,7 @@
 #include "Triangle.h"
 #include "Polygone.h"
 #include "Groupe.h"
+#include "VisiteurSauvTXT.h"
 int main(int argc, char** argv) {
 	//Teste classe Vecteur2D
 	cout << "essai des vecteurs 2D \n";
@@ -161,7 +162,12 @@ int main(int argc, char** argv) {
 		cout << e << endl;
 	}
 
+	//Teste sur le visiteur
+	Forme *test1;
+	test1 = new Cercle(Vecteur2D(1, 1), 1, RED);
+	test1->accepteSauvegarder(new VisiteurSauvTXT);
 
+	g1.accepteSauvegarder(new VisiteurSauvTXT);
 	system("pause");
 	return 0;
 }

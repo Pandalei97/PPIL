@@ -63,13 +63,14 @@ public:
 	* \brief Getter pour savoir si une forme fait parti d'un groupe
 	* \return bool un booléen vrai si la forme est dans un groupe, faux sinon
 	*/
-	bool estMarquee();
+	bool estMarquee()const;
 
 	/**
 	* \brief Setter qui permet de marquer une forme si elle fait parti d'un groupe
 	* \param marquee Marquer la forme par vrai ou faux
 	*/
 	void setMarquee(bool marquee);
+
 
 	/**
 	* \brief Surcharge de l'opérateur string permettant de convertir des formes en string 
@@ -146,5 +147,5 @@ public:
 	*/
 	friend ostream & operator << (ostream & flux, const Forme& forme);
 
-	virtual void accepteSauvegarder(VisiteurSauvTXT *v)const = 0;
+	virtual void accepteSauvegarder(const VisiteurSauvTXT *v)const = 0;
 };

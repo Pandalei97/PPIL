@@ -17,6 +17,10 @@ Polygone::Polygone(const Polygone & obj) : Forme(obj.getCouleur()){
 }
 Polygone::~Polygone(){}
 
+int Polygone::getNbPoints() const {
+	return m_tabPoints.size();
+}
+
 bool Polygone::verifPoints(vector<Vecteur2D>& tabPoints) {
 	//Vérifier s'il existe des doublons
 	for (int i = 0; i < tabPoints.size() - 1; i++) {
@@ -26,7 +30,6 @@ bool Polygone::verifPoints(vector<Vecteur2D>& tabPoints) {
 		}
 			
 	}
-		
 	
 	//Vérifier s'il existe des points alignés
 	double pentePrec = fabs((tabPoints[tabPoints.size() - 1].getY() - tabPoints[0].getY()) / (tabPoints[tabPoints.size() - 1].getX() - tabPoints[0].getX()));
@@ -124,6 +127,6 @@ ostream & Polygone::print(ostream & flux) const {
 	return flux << (string)(*this);
 }
 
-void Polygone::accepteSauvegarder(VisiteurSauvTXT *v)const {
+void Polygone::accepteSauvegarder(const VisiteurSauvTXT *v)const {
 	v->visite(this);
 }

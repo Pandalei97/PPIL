@@ -6,6 +6,7 @@ Groupe::Groupe(const Groupe & groupe):Forme(groupe) {
 	for (int i = 0; i < groupe.m_tabFormes.size(); i++) {
 		m_tabFormes.push_back(groupe.m_tabFormes[i]->clone());
 		m_tabFormes[i]->setCouleur(getCouleur());
+		m_tabFormes[i]->setMarquee(true);
 	}
 		
 }
@@ -100,6 +101,6 @@ ostream & Groupe::print(ostream & flux) const {
 	return flux << (string)(*this);
 }
 
-void Groupe::accepteSauvegarder(VisiteurSauvTXT *v)const {
+void Groupe::accepteSauvegarder(const VisiteurSauvTXT *v)const {
 	v->visite(this);
 }
