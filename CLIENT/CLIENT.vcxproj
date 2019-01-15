@@ -116,6 +116,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="ChargerForme.h" />
+    <ClInclude Include="ChargerFormeCOR.h" />
+    <ClInclude Include="ChargerFormeCORSegment.h" />
     <ClInclude Include="Constantes.h" />
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="Exception.h" />
@@ -126,9 +129,12 @@
     <ClInclude Include="SingletonConnexion.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
+    <ClInclude Include="Visiteur.h" />
+    <ClInclude Include="VisiteurSauvTXT.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="ChargerFormeCOR.cpp" />
     <ClCompile Include="Couleur.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Forme.cpp" />
@@ -139,6 +145,7 @@
     <ClCompile Include="SingletonConnexion.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
+    <ClCompile Include="VisiteurSauvTXT.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -19,6 +19,17 @@ const std::string GREEN = "green";
 const std::string YELLOW = "yellow";
 const std::string CYAN = "cyan";
 
+// Chemin du fichier sauvgarde
+const std::string CHEMIN = ".//Sauvgardes.txt";
+
+/*Les séparateurs
+'-' entre l'identifiant et la forme
+':' entre le type de forme et les donnees de la forme
+';' entre les donnee
+'&' dans un groupe, ce caractère est utilisé pour séparer les différents formes du groupe
+
+
+*/
 /*
 #define DEFAULT "unknown"
 #define BLACK "black"

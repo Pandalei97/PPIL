@@ -26,7 +26,7 @@ Groupe::operator string() const
 	ostringstream oss;
 	oss << "Groupe:" << Forme::operator string();
 	for (int i = 0; i < m_tabFormes.size(); ++i)
-		oss << " && " << *m_tabFormes[i];
+		oss << " & " << *m_tabFormes[i];
 	return oss.str();
 }
 bool Groupe::operator==(const Groupe &obj) const {
