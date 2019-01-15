@@ -36,7 +36,7 @@ bool VisiteurSauvTXT::idValide(const string& id)const {
 	return ((id.find('-') == -1) && (id.find(':') == -1) && (id.find(';') == -1) && (id.find('&') == -1));
 }
 
-void VisiteurSauvTXT::sauvgarde(const string& ligne, const string& chemin)const{
+void VisiteurSauvTXT::sauvegarde(const string& ligne, const string& chemin)const{
 	ofstream fichier(chemin, ios::app);
 	fichier << ligne << endl;
 	fichier.close();
@@ -51,7 +51,7 @@ void VisiteurSauvTXT::visite(const Segment* s) const {
 	//qui transforme un objet en une chaine formaté et elle est indépendante de l'opérator string() dans la classe
 	ostringstream ligne;
 	ligne << creerId() << "-Segment:" << s->getCouleur() << ";" << s->getPO() << ";" << s->getPE();
-	sauvgarde(ligne.str(),m_chemin);
+	sauvegarde(ligne.str(),m_chemin);
 }
 void VisiteurSauvTXT::visite(const Cercle* c) const {
 	
@@ -69,7 +69,7 @@ void VisiteurSauvTXT::visite(const Groupe* g) const {
 			res += visite(forme);
 		}
 	*/
-	sauvgarde(res,m_chemin);
+	sauvegarde(res,m_chemin);
 	
 
 }

@@ -17,7 +17,7 @@ class VisiteurSauvTXT : public Visiteur {
 	//l'identifiant ne doit pas contenir certains caractères spéciaux (les séparateurs pour distinguer les chanmps) 
 	bool idValide(const string& id)const;
 
-	void sauvgarde(const string& ligne, const string& chemin = m_chemin)const;
+	void sauvegarde(const string& ligne, const string& chemin = m_chemin)const;
 public:
 
 	virtual void visite(const Segment* s) const;
