@@ -8,12 +8,16 @@ using namespace std;
 class VisiteurSauvTXT : public Visiteur {
 
 	static const string m_chemin;
+
+	string creerId()const;
 	//On distribue un identifiant à la forme au moment du sauvgarde pour faciliter le chargement de la forme
 	//Pour cela, l'identifiant doit être unique;
 	bool idExiste(const string& id)const;
 
 	//l'identifiant ne doit pas contenir certains caractères spéciaux (les séparateurs pour distinguer les chanmps) 
 	bool idValide(const string& id)const;
+
+	void sauvgarde(const string& ligne, const string& chemin = m_chemin)const;
 public:
 
 	virtual void visite(const Segment* s) const;
