@@ -126,4 +126,6 @@ public:
 	* \return ostream FLux de sortie
 	*/
 	ostream & print(ostream & flux) const;
+
+	void accepteSauvegarder(VisiteurSauvTXT *v)const;
 };

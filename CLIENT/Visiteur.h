@@ -4,6 +4,7 @@
 #include "Triangle.h"
 #include "Polygone.h"
 #include "Groupe.h"
+
 class Visiteur {
 public:
 	virtual void visite(const Segment* s) const = 0;

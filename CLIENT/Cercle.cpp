@@ -1,4 +1,5 @@
 #include "Cercle.h"
+#include "VisiteurSauvTXT.h"
 
 Cercle::Cercle(const Vecteur2D & centre, double rayon, const Couleur & coul) :Forme(coul) {
 	setCentre(centre);
@@ -74,4 +75,8 @@ void Cercle::rotation(const  Vecteur2D & vectCentre, double angle) {
 
 ostream & Cercle::print(ostream & flux) const {
 	return flux << (string)(*this);
+}
+
+void Cercle::accepteSauvegarder(VisiteurSauvTXT *v)const {
+	v->visite(this);
 }

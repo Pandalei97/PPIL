@@ -13,6 +13,7 @@
 #include "Couleur.h"
 #include "Exception.h"
 #include "Vecteur2D.h"
+class VisiteurSauvTXT;
 
 
 using namespace std;
@@ -144,4 +145,6 @@ public:
 	* \return ostream Flux de sortie
 	*/
 	friend ostream & operator << (ostream & flux, const Forme& forme);
+
+	virtual void accepteSauvegarder(VisiteurSauvTXT *v)const = 0;
 };

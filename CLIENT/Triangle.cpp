@@ -1,5 +1,5 @@
 #include "Triangle.h"
-
+#include "VisiteurSauvTXT.h"
 
 
 Triangle::Triangle(const Vecteur2D & P1, const Vecteur2D & P2, const Vecteur2D & P3, const Couleur & coul) :Forme(coul) {
@@ -116,4 +116,8 @@ void Triangle::rotation(const  Vecteur2D & vectCentre, double angle) {
 
 ostream & Triangle::print(ostream & flux) const {
 	return flux << (string)(*this);
+}
+
+void Triangle::accepteSauvegarder(VisiteurSauvTXT *v)const {
+	v->visite(this);
 }

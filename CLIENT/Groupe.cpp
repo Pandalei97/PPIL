@@ -1,5 +1,5 @@
 #include "Groupe.h"
-
+#include "VisiteurSauvTXT.h"
 Groupe::Groupe() :Forme(), m_tabFormes() {}
 Groupe::Groupe(const Couleur &coul):Forme(coul), m_tabFormes(){}
 Groupe::Groupe(const Groupe & groupe):Forme(groupe) {
@@ -98,4 +98,8 @@ void Groupe::rotation(const  Vecteur2D & vectCentre, double angle) {
 }
 ostream & Groupe::print(ostream & flux) const {
 	return flux << (string)(*this);
+}
+
+void Groupe::accepteSauvegarder(VisiteurSauvTXT *v)const {
+	v->visite(this);
 }

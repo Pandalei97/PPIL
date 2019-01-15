@@ -27,19 +27,8 @@ const std::string CHEMIN = ".//Sauvgardes.txt";
 ':' entre le type de forme et les donnees de la forme
 ';' entre les donnee
 '&' dans un groupe, ce caractère est utilisé pour séparer les différents formes du groupe
-
-
 */
-/*
-#define DEFAULT "unknown"
-#define BLACK "black"
-#define BLUE "blue"
-#define RED "red"
-#define GREEN "green"
-#define YELLOW "yellow"
-#define CYAN "cyan"
-*/
+
 const double PI = 3.141592;
-
 
 

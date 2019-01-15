@@ -1,5 +1,5 @@
 #include "Segment.h"
-
+#include "VisiteurSauvTXT.h"
 
 
 Segment::Segment(const Vecteur2D & PO, const Vecteur2D & PE, const Couleur & coul):Forme(coul){
@@ -81,4 +81,8 @@ void Segment::rotation(const  Vecteur2D & vectCentre, double angle) {
 
 ostream & Segment::print(ostream & flux) const {
 	return flux << (string)(*this);
+}
+
+void Segment::accepteSauvegarder(VisiteurSauvTXT *v)const {
+	v->visite(this);
 }

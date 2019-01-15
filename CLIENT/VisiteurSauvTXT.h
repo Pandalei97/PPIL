@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
 #include "Visiteur.h"
-#include "Forme.h"
 
 using namespace std;
 

@@ -1,4 +1,5 @@
 #include "Forme.h"
+#include "VisiteurSauvTXT.h"
 Forme::Forme() :m_couleur(DEFAULT), m_marquee(false) {}
 Forme::Forme(const Forme* forme) : m_couleur(forme->m_couleur), m_marquee(false) {}
 Forme::Forme(const Couleur & couleur) : m_couleur(couleur), m_marquee(false){}
@@ -50,6 +51,7 @@ ostream& Forme::print(ostream & flux) const {
 ostream & operator << (ostream & flux, const Forme& forme) {
 	return forme.print(flux);
 }
+
 
 
 

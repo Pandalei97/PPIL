@@ -1,4 +1,5 @@
 #include "Polygone.h"
+#include "VisiteurSauvTXT.h"
 #include <set>
 Polygone::Polygone(const Vecteur2D & P1, const Vecteur2D & P2, const Vecteur2D& P3, const Couleur & coul) :Forme(coul){
 	m_tabPoints.clear();
@@ -121,4 +122,8 @@ void Polygone::rotation(const  Vecteur2D & vectCentre, double angle) {
 }
 ostream & Polygone::print(ostream & flux) const {
 	return flux << (string)(*this);
+}
+
+void Polygone::accepteSauvegarder(VisiteurSauvTXT *v)const {
+	v->visite(this);
 }
