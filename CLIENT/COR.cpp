@@ -6,14 +6,14 @@ COR * COR::instance = NULL;
 
 COR::COR() {
 	ChargerFormeCOR *ChargeurCercle, *ChargeurSegment, *ChargeurPolygone, *ChargeurGroupe, *ChargeurTriangle;
-	
 	ChargeurCercle = new ChargerFormeCORCercle(NULL);
 	ChargeurSegment = new ChargerFormeCORSegment(ChargeurCercle);
 	ChargeurPolygone = new ChargerFormeCORPolygone(ChargeurSegment);
 	ChargeurGroupe = new ChargerFormeCORGroupe(ChargeurPolygone);
 	ChargeurTriangle = new ChargerFormeCORTriangle(ChargeurGroupe);
-	ChargerFormeCOR *chargeurForme = ChargeurTriangle;
+	chargeurForme = ChargeurTriangle;
 }
+
 COR::~COR()
 {}
 

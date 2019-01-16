@@ -8,14 +8,14 @@
 //La classe qui définit l'ordre des des chargeurs
 class COR {
 private:
-	ChargerForme* chargeurForme;
+	ChargerForme *chargeurForme;
 	static COR* instance;
-	
+	COR();
+	~COR();
 
 public:
 
-	COR();
-	~COR();
+	
 	/**
 	*	\brief méthode pour récupérer l'instance de la classe.
 	*	\return COR * l'instance.

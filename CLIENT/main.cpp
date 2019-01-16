@@ -137,6 +137,7 @@ int main(int argc, char** argv) {
 
 	cout << endl << endl;
 	// Teste classe groupe
+
 	Groupe g1(RED);
 	Forme *cerc5 = new Cercle(Vecteur2D(53,54),35,Couleur(BLUE));
 	Forme *s6 = new Segment(Vecteur2D(45,63),  Vecteur2D(66,95), Couleur(BLUE));
@@ -176,8 +177,11 @@ int main(int argc, char** argv) {
 	//Teste de la COR
 
 	//Construction de la chaine de responsabilité
-	//ChargerForme* chargeurForme = COR().getInstance()->getChargeurForme();
+	COR * cor = COR::getInstance();
 
+	ChargerForme *chargeurForme = cor->getChargeurForme();
+
+	/*
 	ChargerFormeCOR *ChargeurCercle, *ChargeurSegment, *ChargeurPolygone, *ChargeurGroupe, *ChargeurTriangle;
 
 	ChargeurCercle = new ChargerFormeCORCercle(NULL);
@@ -187,6 +191,7 @@ int main(int argc, char** argv) {
 	ChargeurTriangle = new ChargerFormeCORTriangle(ChargeurGroupe);
 	ChargerFormeCOR *chargeurForme = ChargeurTriangle;
 
+	*/
 	
 	Forme* cer1 = chargeurForme->charger("testC");
 	cout << (*cer1) << endl << endl << endl << endl;
