@@ -8,7 +8,7 @@ using namespace std;
 		identifiant-Typeforme:Couleur;donnée2;données3;...;
 
 	le format de l'info d'un groupe:
-		identifiant-Groupe:Couleur;-Typeforme1:Couleur;...;&Typeforme2:Couleur;...;&...&TypeformeN:Couleur;...;&
+		identifiant-Groupe:Couleur;-Typeforme1:Couleur;...;&-Typeforme2:Couleur;...;&...&TypeformeN:Couleur;...;&
 */
 class VisiteurSauvTXT : public Visiteur {
 

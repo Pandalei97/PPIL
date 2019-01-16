@@ -13,7 +13,7 @@ protected:
 public:
 	ChargerFormeCOR(ChargerFormeCOR* suivant);
 
-	Forme* charger(const string & idForme)const;
+	Forme* charger(const string & idForme, const string &info = "")const;
 
 	
 

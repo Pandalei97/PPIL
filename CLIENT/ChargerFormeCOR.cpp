@@ -21,11 +21,18 @@ Vecteur2D ChargerFormeCOR::stringToPoint(const string& infoPoint)const {
 	return Vecteur2D(stod(x), stod(y));
 }
 
-Forme* ChargerFormeCOR::charger(const string & idForme)const {
-	string infoForme = getInfoForme(idForme);
+Forme* ChargerFormeCOR::charger(const string & idForme, const string &info)const {
+	string infoForme;
+	if (info == "")
+		infoForme = getInfoForme(idForme);
+	else
+		infoForme = info;
+
+
 	//Si idForme n'existe pas, on retourne directement NULL
 	if (infoForme == "")
 		return NULL;
+
 	//On extrait la partie de la chaine qui représente le type de la forme
 	string typeForme = infoForme.substr(0, infoForme.find(':'));
 	//Chaque expert ne peut que résoudre un type de forme, sa capacité est décrit par getTypeForme();

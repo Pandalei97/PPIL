@@ -15,7 +15,7 @@ string VisiteurSauvTXT::creerId()const{
 	do {
 		cout << "Quel nom voulez-vous donner a la forme ?" << endl;
 		cin >> id;
-	} while (idExiste(id));
+	} while (idExiste(id) || !idValide(id));
 	return id;
 }
 bool VisiteurSauvTXT::idExiste(const string& id)const {
@@ -25,7 +25,7 @@ bool VisiteurSauvTXT::idExiste(const string& id)const {
 	while (getline(fichier, ligne)) {
 		idForme = ligne.substr(0, ligne.find('-'));
 		if (id == idForme) {
-			cout << "Le nom" << id <<"existe deja" << endl;
+			cout << "Le nom " << id <<" existe deja" << endl;
 			return true;
 		}
 	}
@@ -118,19 +118,13 @@ void VisiteurSauvTXT::visite(const Groupe* g) const {
 		oss << creerId();
 	oss << "-Groupe:" << g->getCouleur() << ";";
 	sauvegarde(oss.str(), m_chemin);
-	//on vide le flux
-	oss.str("");
-	oss.clear();
+	
 	for (int i = 0; i < g->getNbFormes(); i++) {
 		(*g)[i]->accepteSauvegarder(this);
 		//on écrit un séparateur pour séparer les formes du groupe
 		sauvegarde("&", m_chemin);
 	}
 	
-	if (!g->estMarquee()) {
-		//insérer un saut ligne
-		oss << endl;
-		sauvegarde(oss.str(), m_chemin);
-		// sauvegarde("\n", m_chemin); ??
-	}
+	if (!g->estMarquee())
+		sauvegarde("\n", m_chemin);
 }

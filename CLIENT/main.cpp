@@ -163,11 +163,13 @@ int main(int argc, char** argv) {
 	}
 
 	//Teste sur le visiteur
+	
+
+	g1.accepteSauvegarder(new VisiteurSauvTXT);
+
 	Forme *test1;
 	test1 = new Cercle(Vecteur2D(1, 1), 1, RED);
 	test1->accepteSauvegarder(new VisiteurSauvTXT);
-
-	g1.accepteSauvegarder(new VisiteurSauvTXT);
 	system("pause");
 	return 0;
 }

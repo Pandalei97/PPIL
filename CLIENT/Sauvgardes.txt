@@ -1,2 +1,2 @@
-Cercle-Cercle:red;(1,1);1;
-Panyilei-Groupe:green;-Cercle:green;(53,54);35;&-Groupe:green;-Segment:green;(45,63);(66,95);&-Triangle:green;(63,174);(131,154);&&
+rtrtrtr-Groupe:green;-Cercle:green;(53,54);35;&-Groupe:green;-Segment:green;(45,63);(66,95);&-Triangle:green;(63,174);(131,154);&&
+ghghghgh-Cercle:red;(1,1);1;
