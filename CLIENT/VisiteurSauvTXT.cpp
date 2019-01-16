@@ -85,7 +85,7 @@ void VisiteurSauvTXT::visite(const Triangle* t) const {
 	if (!t->estMarquee())
 		oss << creerId();
 
-	oss << "-Triangle:" << t->getCouleur() << ";" << t->getP1() << ";" << t->getP2() << ";";
+	oss << "-Triangle:" << t->getCouleur() << ";" << t->getP1() << ";" << t->getP2() << ";" << t->getP3() << ";";
 
 	if (!t->estMarquee())
 		oss << endl;

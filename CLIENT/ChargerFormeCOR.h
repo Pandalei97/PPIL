@@ -5,6 +5,7 @@
 class ChargerFormeCOR : public ChargerForme {
 	ChargerFormeCOR *suivant;
 protected:
+	
 	/*Les méthodes outils pour faciliter les traitements*/
 	string getInfoForme(const string& idForme)const;
 	//Ici on suppose que infoPoint est tjrs au bon format

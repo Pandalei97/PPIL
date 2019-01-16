@@ -1,5 +1,6 @@
 #include "ChargerFormeCORTriangle.h"
 #include "Triangle.h"
+ChargerFormeCORTriangle::ChargerFormeCORTriangle(ChargerFormeCOR * suivant): ChargerFormeCOR(suivant){}
 const string ChargerFormeCORTriangle::getTypeForme()const {
 	return "Triangle";
 }
@@ -19,5 +20,5 @@ Forme* ChargerFormeCORTriangle::traiterDemande(const string & donneeForme)const 
 	//On prend le reste de la copie
 	copie = copie.substr(copie.find(';') + 1);
 	Vecteur2D p3 = stringToPoint(copie.substr(0, copie.find(';')));
-	return new Triangle(p1, p2, p3, couleur);
+	return new Triangle(p1, p2, p3, Couleur(couleur));
 }

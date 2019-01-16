@@ -1,5 +1,7 @@
 #include "ChargerFormeCORPolygone.h"
 #include "Polygone.h"
+
+ChargerFormeCORPolygone::ChargerFormeCORPolygone(ChargerFormeCOR * suivant): ChargerFormeCOR(suivant){}
 const string ChargerFormeCORPolygone::getTypeForme()const {
 	return "Polygone";
 }
@@ -15,7 +17,7 @@ Forme* ChargerFormeCORPolygone::traiterDemande(const string & donneeForme)const 
 		tabPoints.push_back(point);
 	}
 	
-	Polygone p = Polygone(tabPoints[0], tabPoints[1], tabPoints[2], couleur);
+	Polygone p = Polygone(tabPoints[0], tabPoints[1], tabPoints[2], Couleur(couleur));
 	for (int i = 3; i < tabPoints.size(); i++)
 		p = p + tabPoints[i];
 

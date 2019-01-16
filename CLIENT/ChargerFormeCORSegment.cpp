@@ -1,5 +1,8 @@
 #include "ChargerFormeCORSegment.h"
 #include "Segment.h"
+
+ChargerFormeCORSegment::ChargerFormeCORSegment(ChargerFormeCOR * suivant): ChargerFormeCOR(suivant){}
+
 const string ChargerFormeCORSegment::getTypeForme()const {
 	return "Segment";
 }
@@ -17,5 +20,5 @@ Forme* ChargerFormeCORSegment::traiterDemande(const string & donneeForme)const {
 	//On prend le reste de la copie
 	copie = copie.substr(copie.find(';') + 1);
 	Vecteur2D pe = stringToPoint(copie.substr(0, copie.find(';')));
-	return new Segment(po, pe, couleur);
+	return new Segment(po, pe, Couleur(couleur));
 }

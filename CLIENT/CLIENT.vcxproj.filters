@@ -75,6 +75,9 @@
     <ClInclude Include="ChargerFormeCORGroupe.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="COR.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exception.cpp">
@@ -129,6 +132,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="ChargerFormeCORGroupe.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="COR.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

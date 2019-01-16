@@ -124,6 +124,7 @@
     <ClInclude Include="ChargerFormeCORSegment.h" />
     <ClInclude Include="ChargerFormeCORTriangle.h" />
     <ClInclude Include="Constantes.h" />
+    <ClInclude Include="COR.h" />
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Forme.h" />
@@ -144,6 +145,7 @@
     <ClCompile Include="ChargerFormeCORPolygone.cpp" />
     <ClCompile Include="ChargerFormeCORSegment.cpp" />
     <ClCompile Include="ChargerFormeCORTriangle.cpp" />
+    <ClCompile Include="COR.cpp" />
     <ClCompile Include="Couleur.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Forme.cpp" />

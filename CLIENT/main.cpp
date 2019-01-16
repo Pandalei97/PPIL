@@ -8,6 +8,7 @@
 #include "Polygone.h"
 #include "Groupe.h"
 #include "VisiteurSauvTXT.h"
+#include "COR.h"
 int main(int argc, char** argv) {
 	//Teste classe Vecteur2D
 	cout << "essai des vecteurs 2D \n";
@@ -56,7 +57,7 @@ int main(int argc, char** argv) {
 	}
 
 	Vecteur2D v1(0, 1), v2(2, 1), v3 (1,0);
-	Segment s2(v2, v3), s3(v1, v2, GREEN), s4(s3);
+	Segment s2(v2, v3), s3(v1, v2, Couleur(GREEN)), s4(s3);
 
 	
 	cout << " s2 = " << s2 << endl;
@@ -82,7 +83,7 @@ int main(int argc, char** argv) {
 		cout << e;
 	}
 
-	Cercle cerc2(v1, 3), cerc3(v1, 4, GREEN), cerc4(cerc3);
+	Cercle cerc2(v1, 3), cerc3(v1, 4, Couleur(GREEN)), cerc4(cerc3);
 
 
 	cout << " cerc2 = " << cerc2 << endl;
@@ -98,13 +99,13 @@ int main(int argc, char** argv) {
 	cout << " cerc4 = " << cerc4 << endl << endl << endl;
 
 	//Teste classe Triangle
-	Triangle t1(Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 0),BLUE);
+	Triangle t1(Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 0),Couleur(BLUE));
 	cout << t1 << endl;
 	cout << "Aire:" << t1.getAire() << endl;
 	
 	try
 	{
-		Triangle t2(Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2), BLUE);
+		Triangle t2(Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2), Couleur(BLUE));
 		cout << t2 << endl;
 	}
 	catch (Exception  e)
@@ -137,11 +138,11 @@ int main(int argc, char** argv) {
 	cout << endl << endl;
 	// Teste classe groupe
 	Groupe g1(RED);
-	Forme *cerc5 = new Cercle(Vecteur2D(53,54),35,BLUE);
-	Forme *s6 = new Segment(Vecteur2D(45,63),  Vecteur2D(66,95), BLUE);
-	Forme *t6 = new Triangle(Vecteur2D(63,174),Vecteur2D(131,154),Vecteur2D(98,95),YELLOW);
+	Forme *cerc5 = new Cercle(Vecteur2D(53,54),35,Couleur(BLUE));
+	Forme *s6 = new Segment(Vecteur2D(45,63),  Vecteur2D(66,95), Couleur(BLUE));
+	Forme *t6 = new Triangle(Vecteur2D(63,174),Vecteur2D(131,154),Vecteur2D(98,95),Couleur(YELLOW));
 	Forme *s7 = new Segment(Vecteur2D(45,83),  Vecteur2D(96,55));
-	Forme *t7 = new Triangle(Vecteur2D(113,214),Vecteur2D(141,164),Vecteur2D(118,115),GREEN);
+	Forme *t7 = new Triangle(Vecteur2D(113,214),Vecteur2D(141,164),Vecteur2D(118,115),Couleur(GREEN));
 	cout << *cerc5 << endl;
 	g1 = g1 + cerc5;
 	cout << "g1:(Avant modif couleur)" << g1 << endl;
@@ -164,12 +165,35 @@ int main(int argc, char** argv) {
 
 	//Teste sur le visiteur
 	
-
+	/*
 	g1.accepteSauvegarder(new VisiteurSauvTXT);
 
 	Forme *test1;
 	test1 = new Cercle(Vecteur2D(1, 1), 1, RED);
 	test1->accepteSauvegarder(new VisiteurSauvTXT);
+	*/
+
+	//Teste de la COR
+
+	//Construction de la chaine de responsabilité
+	//ChargerForme* chargeurForme = COR().getInstance()->getChargeurForme();
+
+	ChargerFormeCOR *ChargeurCercle, *ChargeurSegment, *ChargeurPolygone, *ChargeurGroupe, *ChargeurTriangle;
+
+	ChargeurCercle = new ChargerFormeCORCercle(NULL);
+	ChargeurSegment = new ChargerFormeCORSegment(ChargeurCercle);
+	ChargeurPolygone = new ChargerFormeCORPolygone(ChargeurSegment);
+	ChargeurGroupe = new ChargerFormeCORGroupe(ChargeurPolygone);
+	ChargeurTriangle = new ChargerFormeCORTriangle(ChargeurGroupe);
+	ChargerFormeCOR *chargeurForme = ChargeurTriangle;
+
+	
+	Forme* cer1 = chargeurForme->charger("testC");
+	cout << (*cer1) << endl << endl << endl << endl;
+	
+
+	Forme* grou1 = chargeurForme->charger("testG");
+	cout << (*grou1) << endl;
 	system("pause");
 	return 0;
 }
