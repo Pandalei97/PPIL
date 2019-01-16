@@ -118,7 +118,11 @@
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="ChargerForme.h" />
     <ClInclude Include="ChargerFormeCOR.h" />
+    <ClInclude Include="ChargerFormeCORCercle.h" />
+    <ClInclude Include="ChargerFormeCORGroupe.h" />
+    <ClInclude Include="ChargerFormeCORPolygone.h" />
     <ClInclude Include="ChargerFormeCORSegment.h" />
+    <ClInclude Include="ChargerFormeCORTriangle.h" />
     <ClInclude Include="Constantes.h" />
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="Exception.h" />
@@ -135,6 +139,11 @@
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="ChargerFormeCOR.cpp" />
+    <ClCompile Include="ChargerFormeCORCercle.cpp" />
+    <ClCompile Include="ChargerFormeCORGroupe.cpp" />
+    <ClCompile Include="ChargerFormeCORPolygone.cpp" />
+    <ClCompile Include="ChargerFormeCORSegment.cpp" />
+    <ClCompile Include="ChargerFormeCORTriangle.cpp" />
     <ClCompile Include="Couleur.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Forme.cpp" />

@@ -1,3 +1,13 @@
-﻿  Groupe.cpp
+﻿  ChargerFormeCOR.cpp
+  ChargerFormeCORCercle.cpp
+  ChargerFormeCORGroupe.cpp
+  ChargerFormeCORPolygone.cpp
+  ChargerFormeCORSegment.cpp
+  ChargerFormeCORTriangle.cpp
+  Groupe.cpp
 c:\users\yilei pan\desktop\ppil_final\ppil\client\groupe.cpp(16): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
-  CLIENT.vcxproj -> C:\Users\Yilei Pan\Desktop\PPIL_Final\PPIL\CLIENT\x64\Debug\CLIENT.exe
+  Génération de code en cours...
+c:\users\yilei pan\desktop\ppil_final\ppil\client\chargerformecortriangle.cpp(8): error C4716: 'ChargerFormeCORTriangle::traiterDemande' : doit retourner une valeur
+c:\users\yilei pan\desktop\ppil_final\ppil\client\chargerformecorsegment.cpp(8): error C4716: 'ChargerFormeCORSegment::traiterDemande' : doit retourner une valeur
+c:\users\yilei pan\desktop\ppil_final\ppil\client\chargerformecorpolygone.cpp(8): error C4716: 'ChargerFormeCORPolygone::traiterDemande' : doit retourner une valeur
+c:\users\yilei pan\desktop\ppil_final\ppil\client\chargerformecorgroupe.cpp(8): error C4716: 'ChargerFormeCORGroupe::traiterDemande' : doit retourner une valeur
