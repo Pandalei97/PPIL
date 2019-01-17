@@ -26,7 +26,7 @@ const string VisiteurDessin::RequeteOuvertureFenetre(const string& titreFenetre,
 }
 
 void VisiteurDessin::demandeDessiner(const string& infoForme, bool estMarquee)const {
-	try {
+	//try {
 		if(!estMarquee) {
 			//Initialisation des params d'une fenetre
 			string titreFenetre;
@@ -55,16 +55,16 @@ void VisiteurDessin::demandeDessiner(const string& infoForme, bool estMarquee)co
 		else
 			cout << "Le serveur n'a pas ouvert la fenetre" << endl;
 	
-	}
-	catch (Exception e) {
-		cerr << e << endl;
-	}
+	//}
+	//catch (Exception e) {
+		//cerr << e << endl;
+	//}
 }
 void VisiteurDessin::visite(const Segment* s) const {
 	ostringstream infoForme;
 	infoForme << "D$" <<"Segment:" << s->getCouleur() << ";" << s->getPO() << ";" << s->getPE() << ";";
 
-	try {
+	//try {
 		//Connexion si la forme est indépendante
 		if(!s->estMarquee())
 			SingletonConnexion::getInstance()->initialiserConnexion();
@@ -78,10 +78,10 @@ void VisiteurDessin::visite(const Segment* s) const {
 		}
 		
 
-	}
-	catch (Exception e) {
-		cerr << e << endl;
-	}
+	//}
+	//catch (Exception e) {
+	//	cerr << e << endl;
+	//}
 	
 }
 void VisiteurDessin::visite(const Cercle* c) const {

@@ -26,9 +26,10 @@ void Groupe::setCouleur(const string& couleur) {
 Groupe::operator string() const
 {
 	ostringstream oss;
-	oss << "Groupe:" << Forme::operator string();
+	oss << "Groupe[" << (estMarquee() ? " Marquee; " : "Non Marquee; ") << Forme::operator string() << endl;
 	for (int i = 0; i < m_tabFormes.size(); ++i)
 		oss << " & " << *m_tabFormes[i];
+	oss << "]" << endl;
 	return oss.str();
 }
 bool Groupe::operator==(const Groupe &obj) const {

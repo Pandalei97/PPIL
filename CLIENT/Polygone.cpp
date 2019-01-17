@@ -47,10 +47,10 @@ bool Polygone::verifPoints(vector<Vecteur2D>& tabPoints) {
 
 Polygone::operator string() const {
 	ostringstream oss;
-	oss << "Polygone:" << Forme::operator string();
+	oss << "Polygone[" << (estMarquee() ? " Marquee; " : "Non Marquee; ") << Forme::operator string();
 	for (int i = 0; i < m_tabPoints.size(); i++)
-		oss << ";" << (string)m_tabPoints[i];
-
+		oss << "; " << (string)m_tabPoints[i];
+	oss << "]" << endl;
 	return oss.str();
 }
 bool Polygone::operator==(const Polygone &obj) const {

@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
 	cout << "|            Test de dessin d'un Triangle            |" << endl;
 	cout << "=====================================================" << endl << endl;
 
-	Triangle t(Vecteur2D(200, 100), Vecteur2D(150, 200), Vecteur2D(250, 200), Couleur(BLUE));
+	Triangle t(Vecteur2D(200, 100), Vecteur2D(150, 190), Vecteur2D(250, 200), Couleur(BLUE));
 	cout << "Affichage du Triangle :" << endl << t << endl << endl;
 	cout << "Dessin du Triangle :" << endl;
 	t.dessiner(new VisiteurDessin);
@@ -51,12 +51,12 @@ int main(int argc, char** argv) {
 	cout << "|            Test de dessin d'un Polygone           |" << endl;
 	cout << "=====================================================" << endl << endl;
 
-	Polygone p(Vecteur2D(30, 40), Vecteur2D(90, 115), Vecteur2D(80, 55), Couleur(YELLOW));
+	Polygone p(Vecteur2D(30, 40), Vecteur2D(90, 114), Vecteur2D(80, 55), Couleur(YELLOW));
 	p = p + Vecteur2D(75, 120) + Vecteur2D(49, 67);
 	cout << "Affichage du Polygone :" << endl << p << endl << endl;
 	cout << "Dessin du Polygone :" << endl;
 	p.dessiner(new VisiteurDessin);
-
+	
 	//Test Groupe
 	cout << "=====================================================" << endl;
 	cout << "|             Test de dessin d'un Groupe            |" << endl;
@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
 	cout << "Affichage du Groupe :" << endl << g << endl << endl;
 	cout << "Dessin du Groupe :" << endl;
 	g.dessiner(new VisiteurDessin);
-
+	
 	system("pause");
 	return 0;
 }

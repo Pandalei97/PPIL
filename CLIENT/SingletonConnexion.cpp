@@ -6,7 +6,6 @@ SingletonConnexion * SingletonConnexion::instance = NULL;
 
 SingletonConnexion::SingletonConnexion() {
 	sock = NULL;
-	initialiserConnexion();
 }
 SingletonConnexion::~SingletonConnexion()
 {}
@@ -28,7 +27,7 @@ void SingletonConnexion::killInstance() {
 
 bool SingletonConnexion::initialiserConnexion() {
 	if (sock != NULL) {
-		throw Exception("Initialisation deja effectuee");
+		//throw Exception("Initialisation deja effectuee");
 	}
 	try {
 		int r;
