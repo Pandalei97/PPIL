@@ -132,4 +132,5 @@ public:
 
 
 	void accepteSauvegarder(const VisiteurSauvTXT *v)const;
+	void dessiner(const VisiteurDessin *v)const;
 };

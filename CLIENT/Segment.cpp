@@ -1,6 +1,6 @@
 #include "Segment.h"
 #include "VisiteurSauvTXT.h"
-
+#include "VisiteurDessin.h"
 
 Segment::Segment(const Vecteur2D & PO, const Vecteur2D & PE, const Couleur & coul):Forme(coul){
 	if (PO == PE)
@@ -84,5 +84,9 @@ ostream & Segment::print(ostream & flux) const {
 }
 
 void Segment::accepteSauvegarder(const VisiteurSauvTXT *v)const {
+	v->visite(this);
+}
+
+void Segment::dessiner(const VisiteurDessin *v)const {
 	v->visite(this);
 }

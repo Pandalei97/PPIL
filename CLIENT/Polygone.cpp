@@ -1,5 +1,6 @@
 #include "Polygone.h"
 #include "VisiteurSauvTXT.h"
+#include "VisiteurDessin.h"
 #include <set>
 Polygone::Polygone(const Vecteur2D & P1, const Vecteur2D & P2, const Vecteur2D& P3, const Couleur & coul) :Forme(coul){
 	m_tabPoints.clear();
@@ -128,5 +129,9 @@ ostream & Polygone::print(ostream & flux) const {
 }
 
 void Polygone::accepteSauvegarder(const VisiteurSauvTXT *v)const {
+	v->visite(this);
+}
+
+void Polygone::dessiner(const VisiteurDessin *v)const {
 	v->visite(this);
 }

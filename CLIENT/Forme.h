@@ -14,6 +14,7 @@
 #include "Exception.h"
 #include "Vecteur2D.h"
 class VisiteurSauvTXT;
+class VisiteurDessin;
 
 
 using namespace std;
@@ -148,4 +149,5 @@ public:
 	friend ostream & operator << (ostream & flux, const Forme& forme);
 
 	virtual void accepteSauvegarder(const VisiteurSauvTXT *v)const = 0;
+	virtual void dessiner(const VisiteurDessin *v)const = 0;
 };

@@ -1,5 +1,6 @@
 #include "Groupe.h"
 #include "VisiteurSauvTXT.h"
+#include "VisiteurDessin.h"
 Groupe::Groupe() :Forme(), m_tabFormes() {}
 Groupe::Groupe(const Couleur &coul):Forme(coul), m_tabFormes(){}
 Groupe::Groupe(const Groupe & groupe):Forme(groupe) {
@@ -102,5 +103,9 @@ ostream & Groupe::print(ostream & flux) const {
 }
 
 void Groupe::accepteSauvegarder(const VisiteurSauvTXT *v)const {
+	v->visite(this);
+}
+
+void Groupe::dessiner(const VisiteurDessin *v)const {
 	v->visite(this);
 }

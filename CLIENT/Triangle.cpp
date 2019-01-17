@@ -1,6 +1,6 @@
 #include "Triangle.h"
 #include "VisiteurSauvTXT.h"
-
+#include "VisiteurDessin.h"
 
 Triangle::Triangle(const Vecteur2D & P1, const Vecteur2D & P2, const Vecteur2D & P3, const Couleur & coul) :Forme(coul) {
 	if (!verifPoints(P1, P2, P3))
@@ -119,5 +119,9 @@ ostream & Triangle::print(ostream & flux) const {
 }
 
 void Triangle::accepteSauvegarder(const VisiteurSauvTXT *v)const {
+	v->visite(this);
+}
+
+void Triangle::dessiner(const VisiteurDessin *v)const {
 	v->visite(this);
 }

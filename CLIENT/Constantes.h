@@ -7,8 +7,8 @@
 #include <string>
 
 //Taille fenetre pour dessin dans serveur
-#define LARGEUR "1000"
-#define HAUTEUR "700"
+const int LARGEUR = 1000;
+const int HAUTEUR = 700;
 
 /** couleurs*/
 const std::string DEFAULT = "unknown";
