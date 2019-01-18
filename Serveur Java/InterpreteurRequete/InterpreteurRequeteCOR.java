@@ -39,7 +39,7 @@ public abstract class InterpreteurRequeteCOR extends InterpreteurRequete{
      */
     
     public boolean interpreterRequete(String requete, InterfaceGraphic objetAwt,  PrintStream fluxSortant) {
-        if(interpreterRequete1(requete, objetAwt, fluxSortant)){
+        if(avoirTraiteRequete(requete, objetAwt, fluxSortant)){
         	return true;
         }
         else{
@@ -67,13 +67,13 @@ public abstract class InterpreteurRequeteCOR extends InterpreteurRequete{
      * 		Sinon faux si l'expert ne sais pas interpréter la requete.
      */
     
-    public boolean interpreterRequete1(String requete, InterfaceGraphic objetAwt,  PrintStream fluxSortant){
+    public boolean avoirTraiteRequete(String requete, InterfaceGraphic objetAwt,  PrintStream fluxSortant){
     	String type = requete.split("\\$")[0];
     	String donnees_requete = requete.split("\\$")[1];
 		if(!type.equals(this.getType()))
 			return false;
 		else{
-			interpreterRequete2(donnees_requete, objetAwt, fluxSortant);
+			traiterRequete(donnees_requete, objetAwt, fluxSortant);
 			return true;
 		}
     }
@@ -89,7 +89,7 @@ public abstract class InterpreteurRequeteCOR extends InterpreteurRequete{
      * @param fluxSortant
      * 		Notre PrintStream pour répondre au client
      */
-    public abstract void interpreterRequete2(String requete, InterfaceGraphic objetAwt,  PrintStream fluxSortant);
+    public abstract void traiterRequete(String requete, InterfaceGraphic objetAwt,  PrintStream fluxSortant);
     /**
      * Méthode pour avoir le type de requete
      * que l'expert sait résoudre.

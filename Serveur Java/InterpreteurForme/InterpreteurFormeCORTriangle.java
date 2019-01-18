@@ -23,7 +23,7 @@ public class InterpreteurFormeCORTriangle extends InterpreteurFormeCOR {
 	 * Elle ne retourne rien elle dessiner le Polygone.
 	 */
 	
-	public void dessiner2(String forme, InterfaceGraphic objetAwt){
+	public void genererDessin(String forme, InterfaceGraphic objetAwt){
 		//donnesTriangle contient [couleur,point1,point2,point3]
 		String[] donneesTriangle = forme.split(";");
 		String couleurNonInterpretee = donneesTriangle[0];

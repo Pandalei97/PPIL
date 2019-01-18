@@ -19,7 +19,7 @@ public class InterpreteurCouleurCORCyan extends InterpreteurCouleurCOR {
 	 * @return Color.cyan
 	 */
 	
-	public Color interpreterCouleur2(){
+	public Color getCouleur(){
 		return Color.cyan;
 	}
 	/**

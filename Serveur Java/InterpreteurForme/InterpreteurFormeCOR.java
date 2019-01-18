@@ -36,7 +36,7 @@ public abstract class InterpreteurFormeCOR extends InterpreteurForme{
      */
     
     public boolean dessiner(String forme, InterfaceGraphic objetAwt) {
-        if(dessiner1(forme, objetAwt)){
+        if(dessinable(forme, objetAwt)){
         	return true;
         }
         else{
@@ -62,14 +62,14 @@ public abstract class InterpreteurFormeCOR extends InterpreteurForme{
      * 		Sinon faux si l'expert ne sait pas interpréter la forme.
      */
     
-    public boolean dessiner1(String forme, InterfaceGraphic objetAwt)
+    public boolean dessinable(String forme, InterfaceGraphic objetAwt)
     {
     	String typeForme = forme.split(":")[0];
     	if(!typeForme.equals(this.getType()))
     		return false;
     	else{
     		String infosForme = forme.split(":")[1];
-    		dessiner2(infosForme, objetAwt);
+    		genererDessin(infosForme, objetAwt);
     		return true;
     	}
     }
@@ -82,7 +82,7 @@ public abstract class InterpreteurFormeCOR extends InterpreteurForme{
      * @param objetAwt
      * 		Notre objet InterfaceGraphic
      */
-    public abstract void dessiner2(String forme, InterfaceGraphic objetAwt);
+    public abstract void genererDessin(String forme, InterfaceGraphic objetAwt);
     /**
      * Méthode pour avoir le type de forme
      * que l'expert sait résoudre.

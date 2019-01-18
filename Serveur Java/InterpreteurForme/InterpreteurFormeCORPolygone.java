@@ -23,7 +23,7 @@ public class InterpreteurFormeCORPolygone extends InterpreteurFormeCOR {
 	 * Elle ne retourne rien elle dessiner le Polygone.
 	 */
 	
-	public void dessiner2(String forme, InterfaceGraphic objetAwt){
+	public void genererDessin(String forme, InterfaceGraphic objetAwt){
 		//donnesPolygone contient [couleur,point1,point2,point3,......,pointn]
 		String[] donneesPolygone = forme.split(";");
 		String couleurNonInterpretee = donneesPolygone[0];

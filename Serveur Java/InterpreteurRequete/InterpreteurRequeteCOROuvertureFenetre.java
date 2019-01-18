@@ -26,7 +26,7 @@ public class InterpreteurRequeteCOROuvertureFenetre extends InterpreteurRequeteC
 	 * Pas de retour mais elle construit la fenetre.
 	 */
 	
-	public void interpreterRequete2(String fenetre, InterfaceGraphic objetAwt, PrintStream fluxSortant){
+	public void traiterRequete(String fenetre, InterfaceGraphic objetAwt, PrintStream fluxSortant){
 		String[] donneesFenetre = fenetre.split(";");
 		objetAwt.creerFenetre(donneesFenetre[0], Integer.parseInt(donneesFenetre[1]), Integer.parseInt(donneesFenetre[2]));
 		fluxSortant.print("1");

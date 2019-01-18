@@ -28,7 +28,7 @@ public class InterpreteurRequeteCORDessinerForme extends InterpreteurRequeteCOR 
 	 * à travers une autre chaîne de responsabilité.
 	 */
 	
-	public void interpreterRequete2(String forme, InterfaceGraphic objetAwt, PrintStream fluxSortant){
+	public void traiterRequete(String forme, InterfaceGraphic objetAwt, PrintStream fluxSortant){
 		//on dessine grâce à la chaine de repsonsabilité
 		boolean dessinOK = COR.getInstance().getInterpreteurForme().dessiner(forme, objetAwt);
 		if(!dessinOK){

@@ -25,7 +25,7 @@ public class ServeurDessin{
 		ServerSocket serveur;
 		serveur = new ServerSocket(4444); 
 		
-		System.out.println("serveur de majuscule démarré : "+serveur);
+		System.out.println("Serveur de dessin démarré : "+serveur);
 		
 		/**
 		 * Adresse locale de la machine sur laquelle

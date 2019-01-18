@@ -18,7 +18,7 @@ public class InterpreteurCouleurCORYellow extends InterpreteurCouleurCOR {
 	 * si elle est bien interprétée.
 	 * @return Color.yellow
 	 */	
-	public Color interpreterCouleur2(){
+	public Color getCouleur(){
 		return Color.yellow;
 	}
 	/**

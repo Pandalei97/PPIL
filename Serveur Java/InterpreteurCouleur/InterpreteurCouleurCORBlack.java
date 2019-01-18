@@ -17,7 +17,7 @@ public class InterpreteurCouleurCORBlack extends InterpreteurCouleurCOR {
 	 * si elle est bien interprétée.
 	 * @return Color.black
 	 */
-	public Color interpreterCouleur2(){
+	public Color getCouleur(){
 		return Color.black;
 	}
 	/**

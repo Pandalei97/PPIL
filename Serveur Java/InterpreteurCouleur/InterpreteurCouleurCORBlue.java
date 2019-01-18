@@ -19,7 +19,7 @@ public class InterpreteurCouleurCORBlue extends InterpreteurCouleurCOR {
 	 * @return Color.blue
 	 */
 	
-	public Color interpreterCouleur2(){
+	public Color getCouleur(){
 		return Color.blue;
 	}
 	/**

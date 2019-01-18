@@ -22,7 +22,7 @@ public class InterpreteurFormeCORCercle extends InterpreteurFormeCOR {
 	 * 		La chaine de caractere de la couleur a interpréter
 	 * Elle ne retourne rien elle dessiner le cercle.
 	 */
-	public void dessiner2(String forme, InterfaceGraphic objetAwt){
+	public void genererDessin(String forme, InterfaceGraphic objetAwt){
 		String couleurNonInterpretee = forme.split(";")[0];
 		Color couleur = COR.getInstance().getInterpreteurCouleur().interpreterCouleur(couleurNonInterpretee);
 		String[] attributsForme = forme.split(";");

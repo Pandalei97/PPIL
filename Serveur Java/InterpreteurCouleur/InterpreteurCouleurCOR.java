@@ -36,8 +36,11 @@ public abstract class InterpreteurCouleurCOR extends InterpreteurCouleur{
      * 		de responsabilité n'a pas trouvé la couleur.
      */
     public Color interpreterCouleur(String couleur) {
-    	Color c = interpreterCouleur1(couleur);
-        if(c != null){
+    	Color c = null;
+    	if(couleur.equals(this.getType()))
+    		c = getCouleur();
+ 
+    	if(c != null){
         	return c;
         }
         else{
@@ -49,30 +52,14 @@ public abstract class InterpreteurCouleurCOR extends InterpreteurCouleur{
         	}
         }
     }
-    /**
-     * C'est la méthode qui se charge
-     * d'interpréter les couleurs (à l'aide de la méthode
-     * interpreterCouleur2) à partir d'une 
-     * chaine de caracteres. 
-     * @param couleur
-     * 		La chaine de caractere de la couleur a interpréter
-     * @return La couleur si elle a été trouvée
-     * 		NULL si l'expert ne sait pas résoudre la couleur
-     * 		et passe au suivant
-     */
-    public Color interpreterCouleur1(String couleur){
-		if(!couleur.equals(this.getType()))
-			return null;
-		else
-			return interpreterCouleur2();
-    }
+    
     /**
      * Méthode abstraite qui sera implémentée
      * dans les classes qui hériteront de celle-ci.
      * Elle retourne la couleur interprétée.
      * @return Couleur interprétée
      */
-    public abstract Color interpreterCouleur2(); 
+    public abstract Color getCouleur(); 
     /**
      * Méthode pour avoir le type de couleur
      * que l'expert sait résoudre.
