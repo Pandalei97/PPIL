@@ -1,3 +1,4 @@
+#include <string>
 #include "Exception.h"
 #include "Vecteur2D.h"
 #include "Constantes.h"
@@ -36,6 +37,8 @@ int main(int argc, char** argv) {
 	cout << "Affichage de la rotation de v1 a PI/4 dans le sens trigonometrique par rapport a v2:" << endl << vr << endl << endl;
 
 
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "             Test des Couleurs			              " << endl;
@@ -60,7 +63,8 @@ int main(int argc, char** argv) {
 		cout << e << endl << endl;
 	}
 
-
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "             Test des Cercles			              " << endl;
@@ -81,7 +85,8 @@ int main(int argc, char** argv) {
 	cout << "Affichage de la rotation du cercle a PI/4 dans le sens trigonometrique par rapport a v2:" << endl << cr << endl << endl;
 
 
-
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "             Test des Segments				          " << endl;
@@ -109,7 +114,8 @@ int main(int argc, char** argv) {
 	sr.rotation(v2, PI / 4);
 	cout << "Affichage de la rotation du segment a PI/4 dans le sens trigonometrique par rapport a v2:" << endl << sr << endl << endl;
 
-
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "             Test des Triangles			          " << endl;
@@ -138,7 +144,8 @@ int main(int argc, char** argv) {
 	tr.rotation(v2, PI / 4);
 	cout << "Affichage de la rotation du triangle a PI/4 dans le sens trigonometrique par rapport a v2:" << endl << tr << endl << endl;
 
-
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "             Test des Polygones					  " << endl;
@@ -170,7 +177,8 @@ int main(int argc, char** argv) {
 	cout << "Affichage de la rotation du polygone a PI/4 dans le sens trigonometrique par rapport a v2:" << endl << pr << endl << endl;
 
 
-
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "              Test des Groupes						  " << endl;
@@ -200,15 +208,26 @@ int main(int argc, char** argv) {
 	}
 
 
-
+	system("pause");
+	cout << endl;
 
 	cout << "=====================================================" << endl;
 	cout << "              Test des Sauvegardes					  " << endl;
 	cout << "=====================================================" << endl << endl;
 
-	int reponse = 0;
-	cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
-	cin >> reponse;
+	int reponse;
+	while(true) {
+		cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
+		cin >> reponse;
+		if ((reponse != 0 && reponse != 1) || cin.fail()) {
+			cout << "Soyez gentil, donenz une reponse correcte." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		else
+			break;
+	}
+	cout << endl << endl;
 	if (reponse == 1) {
 		cout << "Test sauvegarde d'un Cercle: " << endl;
 		c.accepteSauvegarder(new VisiteurSauvTXT);
@@ -231,14 +250,27 @@ int main(int argc, char** argv) {
 		cout << endl << endl;
 	}
 
+	system("pause");
+	cout << endl;
+
 	cout << "=====================================================" << endl;
 	cout << "              Test des Chargements					  " << endl;
 	cout << "=====================================================" << endl << endl;
-	reponse = 0;
-	cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
-	cin >> reponse;
+
+
+	while (true) {
+		cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
+		cin >> reponse;
+		if ((reponse != 0 && reponse != 1) || cin.fail()) {
+			cout << "Soyez gentil, donenz une reponse correcte." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		else
+			break;
+	}
+
 	cout << endl << endl;
-	
 	if (reponse == 1) {
 		cout << "Pour mieux visualiser le resultat, veuillez donner un id qui correspond au type de forme demande, vous pouvez tester avec les id qui n'existe pas." << endl;
 		cout << "Pour l'info, ces id suivants sont pre-engistres dans le fichier: " << endl;
@@ -252,8 +284,18 @@ int main(int argc, char** argv) {
 		//Cercle
 		cout << "Charger un Cercle:" << endl;
 		do {
-			cout << "Donenz l'id de la forme: " << endl;
-			cin >> idForme;
+			
+			while (true) {
+				cout << "Donenz l'id de la forme: " << endl;
+				cin >> idForme;
+				if (cin.fail()) {
+					cout << "Soyez gentil, donenz une reponse correcte." << endl;
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				}
+				else
+					break;
+			};
 			forme = chargeurForme->charger(idForme);
 			if (forme == NULL)
 				cout << "Cet id n'existe pas!" << endl;
@@ -265,8 +307,17 @@ int main(int argc, char** argv) {
 		//Segment
 		cout << "Charger un Segment:" << endl;
 		do {
-			cout << "Donenz l'id de la forme: " << endl;
-			cin >> idForme;
+			while (true) {
+				cout << "Donenz l'id de la forme: " << endl;
+				cin >> idForme;
+				if (cin.fail()) {
+					cout << "Soyez gentil, donenz une reponse correcte." << endl;
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				}
+				else
+					break;
+			};
 			forme = chargeurForme->charger(idForme);
 			if (forme == NULL)
 				cout << "Cet id n'existe pas!" << endl;
@@ -278,8 +329,18 @@ int main(int argc, char** argv) {
 		//Triangle
 		cout << "Charger un Triangle:" << endl;
 		do {
-			cout << "Donenz l'id de la forme: " << endl;
-			cin >> idForme;
+			while (true) {
+				cout << "Donenz l'id de la forme: " << endl;
+				cin >> idForme;
+				if (cin.fail()) {
+					cout << "Soyez gentil, donenz une reponse correcte." << endl;
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				}
+				else
+					break;
+			};
+
 			forme = chargeurForme->charger(idForme);
 			if (forme == NULL)
 				cout << "Cet id n'existe pas!" << endl;
@@ -291,8 +352,17 @@ int main(int argc, char** argv) {
 		//Polygone
 		cout << "Charger un Polygone:" << endl;
 		do {
-			cout << "Donenz l'id de la forme: " << endl;
-			cin >> idForme;
+			while (true) {
+				cout << "Donenz l'id de la forme: " << endl;
+				cin >> idForme;
+				if (cin.fail()) {
+					cout << "Soyez gentil, donenz une reponse correcte." << endl;
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				}
+				else
+					break;
+			};
 			forme = chargeurForme->charger(idForme);
 			if (forme == NULL)
 				cout << "Cet id n'existe pas!" << endl;
@@ -303,8 +373,17 @@ int main(int argc, char** argv) {
 
 		cout << "Charger un Groupe:" << endl;
 		do {
-			cout << "Donenz l'id de la forme: " << endl;
-			cin >> idForme;
+			while (true) {
+				cout << "Donenz l'id de la forme: " << endl;
+				cin >> idForme;
+				if (cin.fail()) {
+					cout << "Soyez gentil, donenz une reponse correcte." << endl;
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				}
+				else
+					break;
+			};
 			forme = chargeurForme->charger(idForme);
 			if (forme == NULL)
 				cout << "Cet id n'existe pas!" << endl;
@@ -314,12 +393,23 @@ int main(int argc, char** argv) {
 		forme = NULL;
 	}
 	
+	system("pause");
+	cout << endl;
+
 	cout << "=====================================================" << endl;
 	cout << "              Test des Dessins						  " << endl;
 	cout << "=====================================================" << endl << endl;
-	reponse = 0;
-	cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
-	cin >> reponse;
+	while (true) {
+		cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
+		cin >> reponse;
+		if ((reponse != 0 && reponse != 1) || cin.fail()) {
+			cout << "Soyez gentil, donenz une reponse correcte." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		else
+			break;
+	}
 	cout << endl << endl;
 
 	if (reponse == 1) {
