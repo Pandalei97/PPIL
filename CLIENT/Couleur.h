@@ -30,7 +30,7 @@ class Couleur {
 	}
 
 	static vector<string> tab_couleur;
-	string m_couleur;
+	string m_nomCouleur;
 
 public:
 	/**
@@ -42,7 +42,7 @@ public:
 	* \brief Constructeur à partir d'une chaine de caractères
 	* \param couleur Une chaine de caractère représentant la couleur
 	*/
-	Couleur(const string & couleur);
+	Couleur(const string & nomCouleur);
 
 	/**
 	* \brief Constructeur à partir d'une couleur
@@ -59,19 +59,19 @@ public:
 	* \brief Teste si une couleur existe
 	* \param bool Renvoie vrai si la couleur existe, faux sinon
 	*/
-	bool contains(string couleur);
+	bool contains(string nomCouleur);
 
 	/**
 	* \brief Getter pour récupérer la couleur
 	* \return string Une chaine de caractère correspondant à la couleur
 	*/
-	const string & getCouleur() const;
+	const string & getNomCouleur() const;
 
 	/**
 	* \brief Setter pour modifier la couleur
 	* \param couleur Une chaine de caractère correspondant à la couleur à modifier
 	*/
-	void setCouleur(const string & couleur);
+	void setNomCouleur(const string & nomCouleur);
 
 	/**
 	* \brief Surcharge de l'opérateur pour convertir une couleur en string

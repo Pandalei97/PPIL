@@ -1,5 +1,22 @@
-﻿  SingletonConnexion.cpp
-c:\users\yilei pan\desktop\ppil_final\ppil\client\singletonconnexion.cpp(110): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+﻿  Cercle.cpp
+  ChargerFormeCOR.cpp
+  ChargerFormeCORCercle.cpp
+  ChargerFormeCORGroupe.cpp
+c:\users\yilei pan\desktop\ppil_final\ppil\client\chargerformecorgroupe.cpp(22): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+  ChargerFormeCORPolygone.cpp
+  ChargerFormeCORSegment.cpp
+  ChargerFormeCORTriangle.cpp
+  COR.cpp
+  Couleur.cpp
+  Forme.cpp
+  Groupe.cpp
+c:\users\yilei pan\desktop\ppil_final\ppil\client\groupe.cpp(17): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
   main.cpp
+  Polygone.cpp
+c:\users\yilei pan\desktop\ppil_final\ppil\client\polygone.cpp(22): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
+  Segment.cpp
+  Triangle.cpp
+  VisiteurDessin.cpp
+  VisiteurSauvTXT.cpp
   Génération de code en cours...
   CLIENT.vcxproj -> C:\Users\Yilei Pan\Desktop\PPIL_Final\PPIL\CLIENT\x64\Debug\CLIENT.exe

@@ -1,16 +1,16 @@
 #include "Forme.h"
 #include "VisiteurSauvTXT.h"
-Forme::Forme() :m_couleur(DEFAULT), m_marquee(false) {}
+Forme::Forme() :m_couleur(Couleur(DEFAULT)), m_marquee(false) {}
 Forme::Forme(const Forme* forme) : m_couleur(forme->m_couleur), m_marquee(false) {}
 Forme::Forme(const Couleur & couleur) : m_couleur(couleur), m_marquee(false){}
 Forme::~Forme(){}
 
-Couleur Forme::getCouleur() const{
+const Couleur& Forme::getCouleur() const{
 	return m_couleur;
 }
 
-void Forme::setCouleur(const string & couleur) {
-	m_couleur.setCouleur(couleur);
+void Forme::setCouleur(const Couleur & couleur) {
+	m_couleur = couleur;
 }
 
 bool Forme::estMarquee() const{

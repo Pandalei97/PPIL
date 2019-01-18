@@ -4,13 +4,13 @@
 vector<string> Couleur::tab_couleur = Couleur::InitTabCouleur();
 
 Couleur::Couleur(){
-	setCouleur(DEFAULT);
+	setNomCouleur(DEFAULT);
 }
 Couleur::Couleur(const string & couleur) {
-	setCouleur(couleur);
+	setNomCouleur(couleur);
 }
 Couleur::Couleur(const Couleur& couleur){
-	setCouleur(couleur.m_couleur);
+	setNomCouleur(couleur.m_nomCouleur);
 }
 Couleur::~Couleur(){}
 
@@ -24,27 +24,27 @@ bool Couleur::contains(string couleur) {
 
 }
 
-const string & Couleur::getCouleur() const {
-	return m_couleur;
+const string & Couleur::getNomCouleur() const {
+	return m_nomCouleur;
 }
-void Couleur::setCouleur(const string & couleur){
+void Couleur::setNomCouleur(const string & couleur){
 	
 	if (!contains(couleur)) {
 		ostringstream s;
 		s << "Couleur " << couleur << " n'existe pas dans tab_couleur";
 		throw Exception(s.str());
 	}
-	m_couleur = couleur;
+	m_nomCouleur = couleur;
 }
 
 Couleur::operator string() const {
 	ostringstream oss;
-	oss << m_couleur;
+	oss << m_nomCouleur;
 	return oss.str();
 }
 
 bool Couleur::operator==(const  Couleur &obj) const {
-	return m_couleur == obj.m_couleur;
+	return m_nomCouleur == obj.m_nomCouleur;
 }
 bool Couleur::operator != (const Couleur &obj) const {
 	return !((*this) == obj);
@@ -52,7 +52,7 @@ bool Couleur::operator != (const Couleur &obj) const {
 const Couleur Couleur::operator = (const Couleur& couleur) {
 	if (this != &couleur)
 	{
-		m_couleur = couleur.m_couleur;
+		m_nomCouleur = couleur.m_nomCouleur;
 	}
 	return (*this);
 }

@@ -52,13 +52,13 @@ public:
 	* \brief Getter pour récupérer la couleur d'une forme
 	* \return Couleur La couleur de la forme
 	*/
-	Couleur getCouleur()const;
+	const Couleur& getCouleur()const;
 
 	/**
 	* \brief Setter pour modifier la couleur de la forme
 	* \param couleur Chaine de caractère correspondant à la couleur
 	*/
-	virtual void setCouleur(const string & couleur);
+	virtual void setCouleur(const Couleur & couleur);
 
 	/**
 	* \brief Getter pour savoir si une forme fait parti d'un groupe
