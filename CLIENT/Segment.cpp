@@ -36,7 +36,7 @@ void Segment::setPE(const Vecteur2D& PE) {
 
 Segment::operator string() const {
 	ostringstream oss;
-	oss << "Segment[" << (estMarquee() ? " Marquee; " : "Non Marquee; ") << Forme::operator string() << "; " << m_PO << "; " << m_PE << "]" << endl;
+	oss << "Segment[ " << (estMarquee() ? "Marquee; " : "Non Marquee; ") << Forme::operator string() << "; " << m_PO << "; " << m_PE << "; Aire: " << getAire() << "]" << endl;
 	return oss.str();
 }
 bool Segment::operator==(const Segment &obj) const {

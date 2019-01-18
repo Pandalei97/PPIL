@@ -1,4 +1,5 @@
-testG-Groupe:green;-Cercle:green;(53,54);35;&-Groupe:green;-Segment:green;(45,63);(66,95);&-Triangle:green;(63,174);(131,154);(98,95);&&
-testC-Cercle:red;(1,1);1;
-huhe-Groupe:green;-Cercle:green;(53,54);35;&-Groupe:green;-Segment:green;(45,63);(66,95);&-Triangle:green;(63,174);(131,154);(98,95);&&
-yilei-Cercle:red;(1,1);1;
+MonC-Cercle:blue;(250,250);100;
+MonS-Segment:red;(350,30);(490,190);
+MonT-Triangle:blue;(250,400);(200,500);(300,500);
+MonP-Polygone:black;(350,400);(450,400);(550,500);(450,600);(350,600);
+MonG-Groupe:red;-Cercle:red;(250,250);100;&-Segment:red;(350,30);(490,190);&-Triangle:red;(250,400);(200,500);(300,500);&-Polygone:red;(350,400);(450,400);(550,500);(450,600);(350,600);&

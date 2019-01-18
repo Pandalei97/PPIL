@@ -29,6 +29,6 @@ const std::string CHEMIN = ".//Sauvgardes.txt";
 '&' dans un groupe, ce caractère est utilisé pour séparer les différents formes du groupe
 */
 
-const double PI = 3.141592;
+const double PI = 3.14159265358979323846;
 
 

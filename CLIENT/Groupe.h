@@ -20,7 +20,7 @@ public:
 	* \brief Constructeur à partir d'une couleur
 	* \param coul Couleur
 	*/
-	Groupe(const Couleur &coul);
+	Groupe(const Couleur &coul = Couleur());
 
 	/**
 	* \brief Constructeur dpar recopie d'un groupe

@@ -26,7 +26,7 @@ void Groupe::setCouleur(const string& couleur) {
 Groupe::operator string() const
 {
 	ostringstream oss;
-	oss << "Groupe[" << (estMarquee() ? " Marquee; " : "Non Marquee; ") << Forme::operator string() << endl;
+	oss << "Groupe[ " << (estMarquee() ? "Marquee; " : "Non Marquee; ") << Forme::operator string() << endl;
 	for (int i = 0; i < m_tabFormes.size(); ++i)
 		oss << " & " << *m_tabFormes[i];
 	oss << "]" << endl;

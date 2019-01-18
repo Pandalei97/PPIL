@@ -33,11 +33,11 @@ bool Polygone::verifPoints(vector<Vecteur2D>& tabPoints) {
 	}
 	
 	//Vérifier s'il existe des points alignés
-	double pentePrec = fabs((tabPoints[tabPoints.size() - 1].getY() - tabPoints[0].getY()) / (tabPoints[tabPoints.size() - 1].getX() - tabPoints[0].getX()));
+	double pentePrec = (tabPoints[tabPoints.size() - 1].getY() - tabPoints[0].getY()) / (tabPoints[tabPoints.size() - 1].getX() - tabPoints[0].getX());
 	double penteSuiv;
 	for (int i = 0; i < tabPoints.size() - 1; i++)
 	{
-		penteSuiv = fabs((tabPoints[i + 1].getY() - tabPoints[i].getY()) / (tabPoints[i + 1].getX() - tabPoints[i].getX()));
+		penteSuiv = fabs(tabPoints[i + 1].getY() - tabPoints[i].getY()) / (tabPoints[i + 1].getX() - tabPoints[i].getX());
 		if (pentePrec == penteSuiv)
 			return false;
 		pentePrec = penteSuiv;
@@ -47,10 +47,10 @@ bool Polygone::verifPoints(vector<Vecteur2D>& tabPoints) {
 
 Polygone::operator string() const {
 	ostringstream oss;
-	oss << "Polygone[" << (estMarquee() ? " Marquee; " : "Non Marquee; ") << Forme::operator string();
+	oss << "Polygone[ " << (estMarquee() ? "Marquee; " : "Non Marquee; ") << Forme::operator string();
 	for (int i = 0; i < m_tabPoints.size(); i++)
 		oss << "; " << (string)m_tabPoints[i];
-	oss << "]" << endl;
+	oss << "; Aire: " << getAire() << "]" << endl;
 	return oss.str();
 }
 bool Polygone::operator==(const Polygone &obj) const {

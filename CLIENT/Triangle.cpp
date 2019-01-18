@@ -64,7 +64,7 @@ void Triangle::setP3(const Vecteur2D& P3) {
 
 Triangle::operator string() const {
 	ostringstream oss;
-	oss << "Triangle[" << (estMarquee() ? " Marquee; " : "Non Marquee; ") << Forme::operator string() << "; " << m_P1 << "; " << m_P2 << "; " << m_P3 << "]" << endl;
+	oss << "Triangle[ " << (estMarquee() ? "Marquee; " : "Non Marquee; ") << Forme::operator string() << "; " << m_P1 << "; " << m_P2 << "; " << m_P3 << "; Aire: " << getAire() << "]" << endl;
 	return oss.str();
 }
 bool Triangle::operator==(const Triangle &obj) const {

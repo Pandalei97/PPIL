@@ -32,7 +32,7 @@ void Cercle::setRayon(double rayon) {
 
 Cercle::operator string() const {
 	ostringstream oss;
-	oss << "Cercle[ "<< (estMarquee()?" Marquee; ": "Non Marquee; ") << Forme::operator string() << "; Centre : " << m_centre << "; Rayon: " << m_rayon << "]" << endl;
+	oss << "Cercle[ "<< (estMarquee()?"Marquee; ": "Non Marquee; ") << Forme::operator string() << "; Centre : " << m_centre << "; Rayon: " << m_rayon << "; Aire: " << getAire() << "]" << endl;
 	return oss.str();
 }
 bool Cercle::operator==(const Cercle &obj) const {

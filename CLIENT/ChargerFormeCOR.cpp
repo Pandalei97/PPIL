@@ -30,26 +30,22 @@ Vecteur2D ChargerFormeCOR::stringToPoint(const string& infoPoint)const {
 
 Forme* ChargerFormeCOR::charger(const string & idForme, const string &info)const {
 	string infoForme;
-
-	if (info == "") {
-		//cout << "CEST UNE FORME AVEC ID" << endl;
+	//Si on ne passe pas par l'information de la forme, il va essayer de charger depuis un id,
+	//Sinon on prend l'info
+	if (info == "")
 		infoForme = getInfoForme(idForme);
-	}
-		
-	else {
-		//cout << "ON A PASSE UNE COMPOSANT MAIS PAS ID" << endl;
+	else
 		infoForme = info;
-	}
 		
 
 	//Si idForme n'existe pas, on retourne directement NULL
 	if (infoForme == "")
 		return NULL;
 
-	//cout << infoForme << endl;
 	//On extrait la partie de la chaine qui représente le type de la forme
 	string typeForme = infoForme.substr(0, infoForme.find(':'));
 	//cout << typeForme << endl;
+
 	//Chaque expert ne peut que résoudre un type de forme, sa capacité est décrit par getTypeForme();
 	if (typeForme == getTypeForme()){
 		//Si le type passé corresponds à sa capacité, on lui passe les données de la chaine et il va décomposé les données
