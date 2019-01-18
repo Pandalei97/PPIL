@@ -25,40 +25,41 @@ const string VisiteurDessin::RequeteOuvertureFenetre(const string& titreFenetre,
 	return "F$" + titreFenetre + ";" + std::to_string(largeur) + ";" + std::to_string(hauteur) + ";";
 }
 
+void VisiteurDessin::ouvrirFenetre()const {
+	//Initialisation des params d'une fenetre
+	string titreFenetre;
+	int largeur, hauteur;
+	InitInfoFenetre(titreFenetre, largeur, hauteur);
+	//Envoyer la requete pour ouvrir une fenetre
+	SingletonConnexion::getInstance()->envoyerRequete(RequeteOuvertureFenetre(titreFenetre, largeur, hauteur));
+	cout << "Requete ouverture de fenetre envoyee" << endl;
+	cout << "Attente de la reponse du serveur..." << endl;
+	if (SingletonConnexion::getInstance()->serveurATraiteRequete())
+		cout << "La fenetre est ouverte" << endl;
+	else
+		cout << "Le serveur n'a pas ouvert la fenetre" << endl;
+}
 void VisiteurDessin::demandeDessiner(const string& infoForme, bool estMarquee)const {
-	//try {
-		if(!estMarquee) {
-			//Initialisation des params d'une fenetre
-			string titreFenetre;
-			int largeur, hauteur;
-			InitInfoFenetre(titreFenetre, largeur, hauteur);
-			//Envoyer la requete pour ouvrir une fenetre
-			SingletonConnexion::getInstance()->envoyerRequete(RequeteOuvertureFenetre(titreFenetre, largeur, hauteur));
-			cout << "Requete ouverture de fenetre envoyee" << endl;
-			cout << "Attente de la reponse du serveur..." << endl;
-		}
+	try {
+		if (!estMarquee)
+			ouvrirFenetre();
 
-		if (SingletonConnexion::getInstance()->serveurATraiteRequete()) {
-			cout << "La fenetre est ouverte" << endl;
-			SingletonConnexion::getInstance()->envoyerRequete(infoForme);
-			cout << "Requete de dessin envoyee" << endl;
-			cout << "Attente de la reponse du serveur..." << endl;
-			/*Attendre de la reponse du serveur pour savoir s'il a dessiner
-			avant de fermer la connexion*/
-			if (SingletonConnexion::getInstance()->serveurATraiteRequete())
-				cout << "Le serveur a traite la requete : la forme a ete dessinee" << endl;
-			else {
-				cout << "Le serveur n'a pas dessiner la forme" << endl;
-				cout << "Car il ne l'a pas reconnue" << endl;
-			}
+		SingletonConnexion::getInstance()->envoyerRequete(infoForme);
+		cout << "Requete de dessin envoyee" << endl;
+		cout << "Attente de la reponse du serveur..." << endl;
+		/*Attendre de la reponse du serveur pour savoir s'il a dessiner
+		avant de fermer la connexion*/
+		if (SingletonConnexion::getInstance()->serveurATraiteRequete())
+			cout << "Le serveur a traite la requete : la forme a ete dessinee" << endl;
+		else {
+			cout << "Le serveur n'a pas dessiner la forme" << endl;
+			cout << "Car il ne l'a pas reconnue" << endl;
 		}
-		else
-			cout << "Le serveur n'a pas ouvert la fenetre" << endl;
-	
-	//}
-	//catch (Exception e) {
-		//cerr << e << endl;
-	//}
+		
+	}
+	catch (Exception e) {
+		cerr << e << endl;
+	}
 }
 void VisiteurDessin::visite(const Segment* s) const {
 	ostringstream infoForme;
@@ -158,8 +159,11 @@ void VisiteurDessin::visite(const Groupe* g) const {
 
 	try {
 		//Connexion si la forme est indépendante
-		if (!g->estMarquee())
+		if (!g->estMarquee()) {
 			SingletonConnexion::getInstance()->initialiserConnexion();
+			ouvrirFenetre();
+		}
+			
 
 		for (int i = 0; i < g->getNbFormes(); i++) {
 			(*g)[i]->dessiner(this);

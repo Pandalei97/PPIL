@@ -29,7 +29,7 @@ bool Triangle::verifPoints(const Vecteur2D & P1, const Vecteur2D & P2, const Vec
 	double pente1 = (P2.getY() - P1.getY()) / (P2.getX() - P1.getX());
 	double pente2 = (P3.getY() - P1.getY()) / (P3.getX() - P1.getX());
 
-	return fabs(pente1) != fabs(pente2);
+	return pente1 != pente2;
 
 }
 Vecteur2D Triangle::getP1()const {

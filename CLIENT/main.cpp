@@ -42,8 +42,9 @@ int main(int argc, char** argv) {
 	cout << "=====================================================" << endl;
 	cout << "|            Test de dessin d'un Triangle            |" << endl;
 	cout << "=====================================================" << endl << endl;
+	
 
-	Triangle t(Vecteur2D(200, 100), Vecteur2D(150, 190), Vecteur2D(250, 200), Couleur(BLUE));
+	Triangle t(Vecteur2D(200, 100), Vecteur2D(150, 200), Vecteur2D(250, 200), Couleur(BLUE));
 	cout << "Affichage du Triangle :" << endl << t << endl << endl;
 	//cout << "Dessin du Triangle :" << endl;
 	//t.dessiner(new VisiteurDessin);
@@ -64,7 +65,7 @@ int main(int argc, char** argv) {
 	cout << "|             Test de dessin d'un Groupe            |" << endl;
 	cout << "=====================================================" << endl << endl;
 	
-	Couleur coul = Couleur(YELLOW);
+	Couleur coul = Couleur(RED);
 	Groupe g(coul);
 	g = g + &c + &s + &t + &p;
 	cout << "Affichage du Groupe :" << endl << g << endl << endl;
