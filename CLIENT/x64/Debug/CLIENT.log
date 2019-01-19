@@ -1,2 +1,6 @@
-﻿  main.cpp
-  CLIENT.vcxproj -> C:\Users\Yilei Pan\Desktop\PPIL_Final\PPIL\CLIENT\x64\Debug\CLIENT.exe
+﻿  SingletonConnexion.cpp
+c:\users\yilei pan\desktop\ppil\client\singletonconnexion.cpp(130): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  VisiteurDessin.cpp
+  main.cpp
+  Génération de code en cours...
+  CLIENT.vcxproj -> C:\Users\Yilei Pan\Desktop\PPIL\CLIENT\x64\Debug\CLIENT.exe

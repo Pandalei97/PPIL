@@ -1,22 +1,49 @@
 #include "VisiteurDessin.h"
 #include "SingletonConnexion.h"
+#undef max
 
+bool VisiteurDessin::titreValide(const string& id)const {
+	if ((id.find('-') == -1) && (id.find(':') == -1) &&
+		(id.find(';') == -1) && (id.find('&') == -1) &&
+		(id.find('(') == -1) && (id.find(')') == -1) &&
+		(id.find(',') == -1) && (id.find('$') == -1))
+		return true;
+
+	cout << "nom de la fenetre non valide, car il contient des caracteres non autorises" << endl;
+	return false;
+}
 void VisiteurDessin::InitInfoFenetre(string &titreFenetre, int &largeur, int &hauteur)const{
-	cout << "Donner un titre pour la fenetre : " << endl;
-	cin >> titreFenetre;
-	do
-	{
+	do{
+		cout << "Donner un titre pour la fenetre : " << endl;
+		cin >> titreFenetre;
+	}while(!titreValide(titreFenetre));
+
+	while (true) {
 		cout << "Donner un entier pour la largeur de la fenetre, tapez 0 pour la largeur par default : " << endl;
 		cin >> largeur;
-	} while (largeur < 0);
+		if (cin.fail() || largeur < 0) {
+			cout << "Soyez gentil, donenz une reponse correcte." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		else
+			break;
+	}
+
 	if (largeur == 0)
 		largeur = LARGEUR;
 
-	do
-	{
-		cout << "Donner un entier pour la hauteur de la fenetre, tapez 0 pour la hauteur par default : " << endl;
+	while (true) {
+		cout << "Donner un entier pour la hauteur de la fenetre, tapez 0 pour la largeur par default : " << endl;
 		cin >> hauteur;
-	} while (hauteur < 0);
+		if (cin.fail() || hauteur < 0) {
+			cout << "Soyez gentil, donenz une reponse correcte." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		else
+			break;
+	}
 	if (hauteur == 0)
 		hauteur = HAUTEUR;
 	

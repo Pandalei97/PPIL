@@ -33,7 +33,14 @@ bool VisiteurSauvTXT::idExiste(const string& id)const {
 }
 
 bool VisiteurSauvTXT::idValide(const string& id)const {
-	return ((id.find('-') == -1) && (id.find(':') == -1) && (id.find(';') == -1) && (id.find('&') == -1));
+	if ((id.find('-') == -1) && (id.find(':') == -1) &&
+		(id.find(';') == -1) && (id.find('&') == -1) &&
+		(id.find('(') == -1) && (id.find(')') == -1) &&
+		(id.find(',') == -1) && (id.find('$') == -1))
+		return true;
+
+	cout << "Id non valide, car il contient des caracteres non autorises" << endl;
+	return false;
 }
 
 void VisiteurSauvTXT::sauvegarde(const string& ligne, const string& chemin)const{

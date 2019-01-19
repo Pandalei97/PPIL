@@ -216,7 +216,7 @@ int main(int argc, char** argv) {
 	cout << "=====================================================" << endl << endl;
 
 	int reponse;
-	while(true) {
+	while (true) {
 		cout << "Si vou voulez tester ce terme, saisissez 1, sinon saisissez 0:" << endl;
 		cin >> reponse;
 		if ((reponse != 0 && reponse != 1) || cin.fail()) {
@@ -272,7 +272,8 @@ int main(int argc, char** argv) {
 
 	cout << endl << endl;
 	if (reponse == 1) {
-		cout << "Pour mieux visualiser le resultat, veuillez donner un id qui correspond au type de forme demande, vous pouvez tester avec les id qui n'existe pas." << endl;
+		cout << "Pour mieux visualiser le resultat, veuillez donner un id qui correspond au type de forme demande" << endl;
+		cout << "Vous pouvez tester avec les id qui n'existent pas." << endl << endl;
 		cout << "Pour l'info, ces id suivants sont pre-engistres dans le fichier: " << endl;
 		cout << "MonC, MonS, MonT, MonP, MonG" << endl << endl;
 
@@ -284,7 +285,7 @@ int main(int argc, char** argv) {
 		//Cercle
 		cout << "Charger un Cercle:" << endl;
 		do {
-			
+
 			while (true) {
 				cout << "Donenz l'id de la forme: " << endl;
 				cin >> idForme;
@@ -392,7 +393,7 @@ int main(int argc, char** argv) {
 		cout << (*forme) << endl;
 		forme = NULL;
 	}
-	
+
 	system("pause");
 	cout << endl;
 

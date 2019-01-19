@@ -1,0 +1,372 @@
+\hypertarget{class_cercle}{}\section{RÃ©fÃ©rence de la classe Cercle}
+\label{class_cercle}\index{Cercle@{Cercle}}
+Graphe d\textquotesingle{}hÃ©ritage de Cercle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cercle}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cercle_a86c13d359c4446b4f0ccad491b86c72f}{Cercle}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&centre, double rayon, const \mbox{\hyperlink{class_couleur}{Couleur}} \&coul=\mbox{\hyperlink{class_couleur}{Couleur}}())
+\begin{DoxyCompactList}\small\item\em Constructeur à partir du centre, d\textquotesingle{}un rayon et d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cercle_a5711ce1dc4faf72a6b02cddbb9c618cd}{Cercle}} (const \mbox{\hyperlink{class_cercle}{Cercle}} \&obj)
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie d\textquotesingle{}un cercle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_a56cf93b56461ba960b822b9a095b09ad}\label{class_cercle_a56cf93b56461ba960b822b9a095b09ad}} 
+\mbox{\hyperlink{class_cercle_a56cf93b56461ba960b822b9a095b09ad}{$\sim$\+Cercle}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_cercle_afbf26df611767f7b1cc22904fd844932}{get\+Centre}} () const
+\begin{DoxyCompactList}\small\item\em Getter pour récupérer le centre du cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_ac32cf43ab91937caf98d1a130f99937c}{set\+Centre}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&centre)
+\begin{DoxyCompactList}\small\item\em Setter pour modifier le centre du cercle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}{get\+Rayon}} () const
+\begin{DoxyCompactList}\small\item\em Getter pour récupérer le rayon du cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_ab166965772a83365ac4b7514c0089434}{set\+Rayon}} (double rayon)
+\begin{DoxyCompactList}\small\item\em Setter pour modifier le rayon du cercle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur de onversion en string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cercle_a747442744a4d31ab753924b1fa3cad6a}{operator==}} (const \mbox{\hyperlink{class_cercle}{Cercle}} \&objet) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cercle_a718965509a0cbd120a5ffc513da21ac9}{operator!=}} (const \mbox{\hyperlink{class_cercle}{Cercle}} \&objet) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur !=. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_cercle}{Cercle}} \& \mbox{\hyperlink{class_cercle_a83def4735f011dd4ebc18a4e6fc22a7e}{operator=}} (const \mbox{\hyperlink{class_cercle}{Cercle}} \&obj)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur =. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{class_cercle_a2477495263095a5553f2bcfa524f03ac}{get\+Aire}} () const
+\begin{DoxyCompactList}\small\item\em Getter pour récupérer l\textquotesingle{}aire du cercle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_cercle_a56073052a84c4b8e04124692e6dc58f5}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Clone un cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_a41c2ecef959a6273a08d44806351f0f4}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vect\+Homotethie, double k)
+\begin{DoxyCompactList}\small\item\em Effectue une homotéthie sur le cercle qui modifie directement le cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_aec369809aab0faf3adc93c62e6acc06c}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vect\+Translation)
+\begin{DoxyCompactList}\small\item\em Effectue une translation sur le cercle qui modifie directement le cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_a6cabe637a245d902e5bfe7d82efd493f}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vect\+Centre, double angle)
+\begin{DoxyCompactList}\small\item\em Effectue une rotation sur le cercle qui modifie directement le cercle. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_cercle_a80410c399a44cfa15bd2fd19df8f3648}{print}} (ostream \&flux) const
+\begin{DoxyCompactList}\small\item\em Affiche les informations sur le cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_a681df3cd077879881755a727b950a263}{accepte\+Sauvegarder}} (const \mbox{\hyperlink{class_visiteur_sauv_t_x_t}{Visiteur\+Sauv\+T\+XT}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Appelle la méthode visite du visiteur de sauvegarde correpondant au cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_a2d3d99149647f033b6f8f470c9a1f53f}{dessiner}} (const \mbox{\hyperlink{class_visiteur_dessin}{Visiteur\+Dessin}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Appelle la méthode visite du visiteur de dessin correpondant au cercle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_cercle_a86c13d359c4446b4f0ccad491b86c72f}\label{class_cercle_a86c13d359c4446b4f0ccad491b86c72f}} 
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{Cercle()}{Cercle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cercle\+::\+Cercle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{centre,  }\item[{double}]{rayon,  }\item[{const \mbox{\hyperlink{class_couleur}{Couleur}} \&}]{coul = {\ttfamily \mbox{\hyperlink{class_couleur}{Couleur}}()} }\end{DoxyParamCaption})}
+
+
+
+Constructeur à partir du centre, d\textquotesingle{}un rayon et d\textquotesingle{}une couleur. 
+
+La couleur est mise par défaut avec le constructeur par défaut \mbox{\hyperlink{class_couleur}{Couleur}}. 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em centre} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em rayon} & Réel \\
+\hline
+{\em coul} & \mbox{\hyperlink{class_couleur}{Couleur}} du cercle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_a5711ce1dc4faf72a6b02cddbb9c618cd}\label{class_cercle_a5711ce1dc4faf72a6b02cddbb9c618cd}} 
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{Cercle()}{Cercle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cercle\+::\+Cercle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cercle}{Cercle}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Constructeur par recopie d\textquotesingle{}un cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em obj} & \mbox{\hyperlink{class_cercle}{Cercle}} à recopier \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_cercle_a681df3cd077879881755a727b950a263}\label{class_cercle_a681df3cd077879881755a727b950a263}} 
+\index{Cercle@{Cercle}!accepteSauvegarder@{accepteSauvegarder}}
+\index{accepteSauvegarder@{accepteSauvegarder}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{accepteSauvegarder()}{accepteSauvegarder()}}
+{\footnotesize\ttfamily void Cercle\+::accepte\+Sauvegarder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visiteur_sauv_t_x_t}{Visiteur\+Sauv\+T\+XT}} $\ast$}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelle la méthode visite du visiteur de sauvegarde correpondant au cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em v} & Pointeur sur le visiteur de sauvegarde \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_a7be10bca98001dc368adc3a3e93d0f48}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a56073052a84c4b8e04124692e6dc58f5}\label{class_cercle_a56073052a84c4b8e04124692e6dc58f5}} 
+\index{Cercle@{Cercle}!clone@{clone}}
+\index{clone@{clone}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Cercle\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clone un cercle. 
+
+Méthode virtuelle pure que l\textquotesingle{}on redéfinit ici \begin{DoxyReturn}{Renvoie}
+Forme$\ast$ Un pointeur sur une \mbox{\hyperlink{class_forme}{Forme}} (ici un cercle) 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_a226750dc3f772514fe58e1dc16f3d0d5}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a2d3d99149647f033b6f8f470c9a1f53f}\label{class_cercle_a2d3d99149647f033b6f8f470c9a1f53f}} 
+\index{Cercle@{Cercle}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{dessiner()}{dessiner()}}
+{\footnotesize\ttfamily void Cercle\+::dessiner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visiteur_dessin}{Visiteur\+Dessin}} $\ast$}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelle la méthode visite du visiteur de dessin correpondant au cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em v} & Pointeur sur le visiteur de dessin \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_a8cd4879a6a5751cbf6d3bbbfbec41566}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a2477495263095a5553f2bcfa524f03ac}\label{class_cercle_a2477495263095a5553f2bcfa524f03ac}} 
+\index{Cercle@{Cercle}!getAire@{getAire}}
+\index{getAire@{getAire}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{getAire()}{getAire()}}
+{\footnotesize\ttfamily const double Cercle\+::get\+Aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Getter pour récupérer l\textquotesingle{}aire du cercle. 
+
+\begin{DoxyReturn}{Renvoie}
+Réel Correspondant à l\textquotesingle{}aire du cercle 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_adf4346150d8f734d7a48f7661e30cab4}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_afbf26df611767f7b1cc22904fd844932}\label{class_cercle_afbf26df611767f7b1cc22904fd844932}} 
+\index{Cercle@{Cercle}!getCentre@{getCentre}}
+\index{getCentre@{getCentre}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{getCentre()}{getCentre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Cercle\+::get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter pour récupérer le centre du cercle. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Le centre du cercle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}\label{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}} 
+\index{Cercle@{Cercle}!getRayon@{getRayon}}
+\index{getRayon@{getRayon}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{getRayon()}{getRayon()}}
+{\footnotesize\ttfamily double Cercle\+::get\+Rayon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter pour récupérer le rayon du cercle. 
+
+\begin{DoxyReturn}{Renvoie}
+Réel Le rayon du cercle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cercle_a41c2ecef959a6273a08d44806351f0f4}\label{class_cercle_a41c2ecef959a6273a08d44806351f0f4}} 
+\index{Cercle@{Cercle}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily void Cercle\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vect\+Homotethie,  }\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Effectue une homotéthie sur le cercle qui modifie directement le cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em vect\+Homotethie} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em k} & Réel \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_aeaae98ea3de8523de9ba9093e19779d8}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}\label{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}} 
+\index{Cercle@{Cercle}!operator string@{operator string}}
+\index{operator string@{operator string}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Cercle\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur de onversion en string. 
+
+Convertit un \mbox{\hyperlink{class_cercle}{Cercle}} en string 
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_forme_a809375f023f0f19227f3e3821ee56731}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a718965509a0cbd120a5ffc513da21ac9}\label{class_cercle_a718965509a0cbd120a5ffc513da21ac9}} 
+\index{Cercle@{Cercle}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Cercle\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cercle}{Cercle}} \&}]{objet }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur !=. 
+
+Utilise == pour comparer si deux cercles sont différents 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em objet} & \mbox{\hyperlink{class_cercle}{Cercle}} à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool Un booléen vrai si les deux cercles sont différents, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cercle_a83def4735f011dd4ebc18a4e6fc22a7e}\label{class_cercle_a83def4735f011dd4ebc18a4e6fc22a7e}} 
+\index{Cercle@{Cercle}!operator=@{operator=}}
+\index{operator=@{operator=}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_cercle}{Cercle}} \& Cercle\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cercle}{Cercle}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur =. 
+
+Affecte à un cercle les valeurs d\textquotesingle{}un autre cercle 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em obj} & \mbox{\hyperlink{class_cercle}{Cercle}} à copier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_a747442744a4d31ab753924b1fa3cad6a}\label{class_cercle_a747442744a4d31ab753924b1fa3cad6a}} 
+\index{Cercle@{Cercle}!operator==@{operator==}}
+\index{operator==@{operator==}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Cercle\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cercle}{Cercle}} \&}]{objet }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur ==. 
+
+Teste si deux cercles sont identiques 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em objet} & \mbox{\hyperlink{class_cercle}{Cercle}} à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool Un booléen vrai si les deux cercles sont identiques, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cercle_a80410c399a44cfa15bd2fd19df8f3648}\label{class_cercle_a80410c399a44cfa15bd2fd19df8f3648}} 
+\index{Cercle@{Cercle}!print@{print}}
+\index{print@{print}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Cercle\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{flux }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche les informations sur le cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em flux} & Flux de sortie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ostream Un flux de sortie 
+\end{DoxyReturn}
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_forme_a348a12ae03fe2167ffd586f4deae6c76}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a6cabe637a245d902e5bfe7d82efd493f}\label{class_cercle_a6cabe637a245d902e5bfe7d82efd493f}} 
+\index{Cercle@{Cercle}!rotation@{rotation}}
+\index{rotation@{rotation}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily void Cercle\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vect\+Centre,  }\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Effectue une rotation sur le cercle qui modifie directement le cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em vect\+Centre} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em angle} & Réel \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_af17c4156d00281b4b62d8c27dcb75569}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_ac32cf43ab91937caf98d1a130f99937c}\label{class_cercle_ac32cf43ab91937caf98d1a130f99937c}} 
+\index{Cercle@{Cercle}!setCentre@{setCentre}}
+\index{setCentre@{setCentre}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{setCentre()}{setCentre()}}
+{\footnotesize\ttfamily void Cercle\+::set\+Centre (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{centre }\end{DoxyParamCaption})}
+
+
+
+Setter pour modifier le centre du cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em centre} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} correspondant au cercle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_ab166965772a83365ac4b7514c0089434}\label{class_cercle_ab166965772a83365ac4b7514c0089434}} 
+\index{Cercle@{Cercle}!setRayon@{setRayon}}
+\index{setRayon@{setRayon}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{setRayon()}{setRayon()}}
+{\footnotesize\ttfamily void Cercle\+::set\+Rayon (\begin{DoxyParamCaption}\item[{double}]{rayon }\end{DoxyParamCaption})}
+
+
+
+Setter pour modifier le rayon du cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em rayon} & Réel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_aec369809aab0faf3adc93c62e6acc06c}\label{class_cercle_aec369809aab0faf3adc93c62e6acc06c}} 
+\index{Cercle@{Cercle}!translation@{translation}}
+\index{translation@{translation}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily void Cercle\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vect\+Translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Effectue une translation sur le cercle qui modifie directement le cercle. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em vect\+Translation} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_ad156a02098ef453b09919b2a3156f607}{Forme}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cercle_8h}{Cercle.\+h}}\item 
+Cercle.\+cpp\end{DoxyCompactItemize}

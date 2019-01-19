@@ -7,6 +7,13 @@
 #include "Visiteur.h"
 #include "Constantes.h"
 class VisiteurDessin : public Visiteur {
+
+	/**
+	* \brief Teste si un nom est valide, c'est-à-dire qu'il ne contient pas certains caractères {"-", ";", "&", ":", "(", ")", "$", ","}
+	* \param titreFenetre titre à vérifier
+	*/
+	bool titreValide(const string& titreFenetre)const;
+
 	/**
 	* \brief Demande à l'utilisateur les informations concernant la création de la fenêtre
 	* \param titreFenetre Nom à donner à la fenêtre

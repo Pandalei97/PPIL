@@ -1,6 +1,6 @@
 #include "SingletonConnexion.h"
 #pragma warning(disable:4996) 
-
+#undef max
 
 SingletonConnexion * SingletonConnexion::instance = NULL;
 
@@ -60,10 +60,30 @@ bool SingletonConnexion::initialiserConnexion() {
 		short portServeur;
 
 		//Saisir l'adresse IP et le port
-		cout << "tapez l'adresse IP du serveur de dessin : " << endl;
-		cin >> adresseServeur;
-		cout << "tapez le port du serveur du serveur de dessin : " << endl;
-		cin >> portServeur;
+		while (true) {
+			cout << "tapez l'adresse IP du serveur de dessin : " << endl;
+			cin >> adresseServeur;
+
+			if (inet_addr(adresseServeur.c_str()) == INADDR_NONE) {
+				cout << "Soyez gentil, donenz un ip correct." << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			}
+			else
+				break;
+		}
+
+		while (true) {
+			cout << "tapez le port du serveur du serveur de dessin : " << endl;
+			cin >> portServeur;
+			if (cin.fail()) {
+				cout << "Soyez gentil, donenz un port correct." << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			}
+			else
+				break;
+		}
 
 		sockaddr.sin_family = AF_INET;
 

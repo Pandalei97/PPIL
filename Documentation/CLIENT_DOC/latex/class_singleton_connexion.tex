@@ -1,0 +1,85 @@
+\hypertarget{class_singleton_connexion}{}\section{RÃ©fÃ©rence de la classe Singleton\+Connexion}
+\label{class_singleton_connexion}\index{SingletonConnexion@{SingletonConnexion}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_singleton_connexion_ad050c458fa21b5292d982b8ca265fec0}{initialiser\+Connexion}} ()
+\begin{DoxyCompactList}\small\item\em Initialise la connexion vers le serveur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_singleton_connexion_a700b93e730b6d57f0c249153420dd12b}\label{class_singleton_connexion_a700b93e730b6d57f0c249153420dd12b}} 
+void \mbox{\hyperlink{class_singleton_connexion_a700b93e730b6d57f0c249153420dd12b}{fermer\+Connexion}} ()
+\begin{DoxyCompactList}\small\item\em Ferme la connexion vers le serveur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_singleton_connexion_adf9e4f1c58e72f1b4bd3ed9821356c41}{envoyer\+Requete}} (const string \&str)
+\begin{DoxyCompactList}\small\item\em Envoie une requête au serveur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_singleton_connexion_a68501656107c8ab123f8ad386731fec9}{serveur\+A\+Traite\+Requete}} ()
+\begin{DoxyCompactList}\small\item\em Teste si une requête a été traitée par le serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_singleton_connexion}{Singleton\+Connexion}} $\ast$ \mbox{\hyperlink{class_singleton_connexion_a58810d15c0a686c4695e1b2373319ab8}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Retourne une instance unique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_singleton_connexion_a185cc5359c9b2e62a47315d0a3cf311c}\label{class_singleton_connexion_a185cc5359c9b2e62a47315d0a3cf311c}} 
+static void \mbox{\hyperlink{class_singleton_connexion_a185cc5359c9b2e62a47315d0a3cf311c}{kill\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Ferme l\textquotesingle{}instance unique en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_singleton_connexion_adf9e4f1c58e72f1b4bd3ed9821356c41}\label{class_singleton_connexion_adf9e4f1c58e72f1b4bd3ed9821356c41}} 
+\index{SingletonConnexion@{SingletonConnexion}!envoyerRequete@{envoyerRequete}}
+\index{envoyerRequete@{envoyerRequete}!SingletonConnexion@{SingletonConnexion}}
+\subsubsection{\texorpdfstring{envoyerRequete()}{envoyerRequete()}}
+{\footnotesize\ttfamily void Singleton\+Connexion\+::envoyer\+Requete (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Envoie une requête au serveur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em str} & La chaine de caractère à envoyer au serveur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_singleton_connexion_a58810d15c0a686c4695e1b2373319ab8}\label{class_singleton_connexion_a58810d15c0a686c4695e1b2373319ab8}} 
+\index{SingletonConnexion@{SingletonConnexion}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!SingletonConnexion@{SingletonConnexion}}
+\subsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_singleton_connexion}{Singleton\+Connexion}} $\ast$ Singleton\+Connexion\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne une instance unique. 
+
+Va créer l\textquotesingle{}instance si celle-\/ci n\textquotesingle{}existe pas ou bien juste la retourner dans le cas contraire \begin{DoxyReturn}{Renvoie}
+Singleton\+Connexion$\ast$ Pointeur sur l\textquotesingle{}instance unique 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_singleton_connexion_ad050c458fa21b5292d982b8ca265fec0}\label{class_singleton_connexion_ad050c458fa21b5292d982b8ca265fec0}} 
+\index{SingletonConnexion@{SingletonConnexion}!initialiserConnexion@{initialiserConnexion}}
+\index{initialiserConnexion@{initialiserConnexion}!SingletonConnexion@{SingletonConnexion}}
+\subsubsection{\texorpdfstring{initialiserConnexion()}{initialiserConnexion()}}
+{\footnotesize\ttfamily bool Singleton\+Connexion\+::initialiser\+Connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise la connexion vers le serveur. 
+
+\begin{DoxyReturn}{Renvoie}
+bool Booléen vrai si la connexion est réussie, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_singleton_connexion_a68501656107c8ab123f8ad386731fec9}\label{class_singleton_connexion_a68501656107c8ab123f8ad386731fec9}} 
+\index{SingletonConnexion@{SingletonConnexion}!serveurATraiteRequete@{serveurATraiteRequete}}
+\index{serveurATraiteRequete@{serveurATraiteRequete}!SingletonConnexion@{SingletonConnexion}}
+\subsubsection{\texorpdfstring{serveurATraiteRequete()}{serveurATraiteRequete()}}
+{\footnotesize\ttfamily bool Singleton\+Connexion\+::serveur\+A\+Traite\+Requete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Teste si une requête a été traitée par le serveur. 
+
+\begin{DoxyReturn}{Renvoie}
+bool Booléen vrai si la requête a été traitée, faux sinon 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_singleton_connexion_8h}{Singleton\+Connexion.\+h}}\item 
+Singleton\+Connexion.\+cpp\end{DoxyCompactItemize}

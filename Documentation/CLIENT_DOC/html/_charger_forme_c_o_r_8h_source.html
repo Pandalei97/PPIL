@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de ChargerFormeCOR.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ChargerFormeCOR.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ChargerForme.h&quot;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//La classe abstraite qui factorise toutes les méthodes en communes des experts</span></div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_charger_forme_c_o_r.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_charger_forme_c_o_r.html">ChargerFormeCOR</a> : <span class="keyword">public</span> <a class="code" href="class_charger_forme.html">ChargerForme</a> {</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_charger_forme_c_o_r.html">ChargerFormeCOR</a> *suivant;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_charger_forme_c_o_r.html#a582e95ff92f06d2c45e6c46f09151e36">getInfoForme</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; idForme)<span class="keyword">const</span>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code" href="class_charger_forme_c_o_r.html#a5b1cd8aabcc803143234a7034047a62b">stringToPoint</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; infoPoint)<span class="keyword">const</span>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_charger_forme_c_o_r.html#a95609cb9640074329ce2ff8ac22d622f">ChargerFormeCOR</a>(<a class="code" href="class_charger_forme_c_o_r.html">ChargerFormeCOR</a>* suivant);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_forme.html">Forme</a>* <a class="code" href="class_charger_forme_c_o_r.html#aa40ed5e3df01527bcaaf61c5bb56bd65">charger</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; idForme, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;info = <span class="stringliteral">&quot;&quot;</span>)<span class="keyword">const</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="class_charger_forme_c_o_r.html#ae740eabcd9b3cc3809c1fe5ffd0100a1">getTypeForme</a>()<span class="keyword">const</span> = 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_forme.html">Forme</a>* <a class="code" href="class_charger_forme_c_o_r.html#a1d9563c3a1ff9d6d86aa87a83bdaf8da">traiterDemande</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; infoForme)<span class="keyword">const</span> = 0;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div><div class="ttc" id="class_charger_forme_c_o_r_html_aa40ed5e3df01527bcaaf61c5bb56bd65"><div class="ttname"><a href="class_charger_forme_c_o_r.html#aa40ed5e3df01527bcaaf61c5bb56bd65">ChargerFormeCOR::charger</a></div><div class="ttdeci">Forme * charger(const string &amp;idForme, const string &amp;info=&quot;&quot;) const</div><div class="ttdoc">Appelle un expert pour charger la forme, si l'expert ne sait pas résoudre le problème alors on passe à l'ex...</div><div class="ttdef"><b>Definition:</b> ChargerFormeCOR.cpp:31</div></div>
+<div class="ttc" id="class_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:22</div></div>
+<div class="ttc" id="class_charger_forme_c_o_r_html_ae740eabcd9b3cc3809c1fe5ffd0100a1"><div class="ttname"><a href="class_charger_forme_c_o_r.html#ae740eabcd9b3cc3809c1fe5ffd0100a1">ChargerFormeCOR::getTypeForme</a></div><div class="ttdeci">virtual const string getTypeForme() const =0</div><div class="ttdoc">Méthode virtuelle pure qui retourne le type de la forme.</div></div>
+<div class="ttc" id="class_charger_forme_c_o_r_html_a1d9563c3a1ff9d6d86aa87a83bdaf8da"><div class="ttname"><a href="class_charger_forme_c_o_r.html#a1d9563c3a1ff9d6d86aa87a83bdaf8da">ChargerFormeCOR::traiterDemande</a></div><div class="ttdeci">virtual Forme * traiterDemande(const string &amp;infoForme) const =0</div><div class="ttdoc">Méthode virtuelle pure. Extrait les données d'une forme à partir d'une chaine de caractères.</div></div>
+<div class="ttc" id="class_charger_forme_c_o_r_html"><div class="ttname"><a href="class_charger_forme_c_o_r.html">ChargerFormeCOR</a></div><div class="ttdef"><b>Definition:</b> ChargerFormeCOR.h:5</div></div>
+<div class="ttc" id="class_vecteur2_d_html"><div class="ttname"><a href="class_vecteur2_d.html">Vecteur2D</a></div><div class="ttdef"><b>Definition:</b> Vecteur2D.h:26</div></div>
+<div class="ttc" id="class_charger_forme_c_o_r_html_a5b1cd8aabcc803143234a7034047a62b"><div class="ttname"><a href="class_charger_forme_c_o_r.html#a5b1cd8aabcc803143234a7034047a62b">ChargerFormeCOR::stringToPoint</a></div><div class="ttdeci">Vecteur2D stringToPoint(const string &amp;infoPoint) const</div><div class="ttdoc">Convertion d'une chaine de caractères correspondant à un point en un Vecteur2D.</div><div class="ttdef"><b>Definition:</b> ChargerFormeCOR.cpp:22</div></div>
+<div class="ttc" id="class_charger_forme_c_o_r_html_a95609cb9640074329ce2ff8ac22d622f"><div class="ttname"><a href="class_charger_forme_c_o_r.html#a95609cb9640074329ce2ff8ac22d622f">ChargerFormeCOR::ChargerFormeCOR</a></div><div class="ttdeci">ChargerFormeCOR(ChargerFormeCOR *suivant)</div><div class="ttdoc">Constructeur à partir d'un pointeur sur l'expert suivant.</div><div class="ttdef"><b>Definition:</b> ChargerFormeCOR.cpp:4</div></div>
+<div class="ttc" id="class_charger_forme_c_o_r_html_a582e95ff92f06d2c45e6c46f09151e36"><div class="ttname"><a href="class_charger_forme_c_o_r.html#a582e95ff92f06d2c45e6c46f09151e36">ChargerFormeCOR::getInfoForme</a></div><div class="ttdeci">string getInfoForme(const string &amp;idForme) const</div><div class="ttdoc">Récupère les informations d'une forme en fonction de son identifiant.</div><div class="ttdef"><b>Definition:</b> ChargerFormeCOR.cpp:6</div></div>
+<div class="ttc" id="class_charger_forme_html"><div class="ttname"><a href="class_charger_forme.html">ChargerForme</a></div><div class="ttdef"><b>Definition:</b> ChargerForme.h:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
