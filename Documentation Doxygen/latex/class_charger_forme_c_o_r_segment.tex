@@ -1,0 +1,88 @@
+\hypertarget{class_charger_forme_c_o_r_segment}{}\section{Charger\+Forme\+C\+O\+R\+Segment Class Reference}
+\label{class_charger_forme_c_o_r_segment}\index{Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}}
+
+
+{\ttfamily \#include $<$Charger\+Forme\+C\+O\+R\+Segment.\+h$>$}
+
+Inheritance diagram for Charger\+Forme\+C\+O\+R\+Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_charger_forme_c_o_r_segment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_charger_forme_c_o_r_segment_ac3a9caaf7fc8e03678cca2161513a1f4}{Charger\+Forme\+C\+O\+R\+Segment} (\hyperlink{class_charger_forme_c_o_r}{Charger\+Forme\+C\+OR} $\ast$suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. \end{DoxyCompactList}\item 
+const string \hyperlink{class_charger_forme_c_o_r_segment_a88fc3dc3d1e4fb196246f5105965e285}{get\+Type\+Forme} () const
+\begin{DoxyCompactList}\small\item\em Retourne le type de la forme que l\textquotesingle{}expert peut traiter (ici un segment) \end{DoxyCompactList}\item 
+\hyperlink{class_forme}{Forme} $\ast$ \hyperlink{class_charger_forme_c_o_r_segment_ac7998f4a2669a3f88dc0b204af187780}{traiter\+Demande} (const string \&info\+Forme) const
+\begin{DoxyCompactList}\small\item\em Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_charger_forme_c_o_r_segment_ac3a9caaf7fc8e03678cca2161513a1f4}\label{class_charger_forme_c_o_r_segment_ac3a9caaf7fc8e03678cca2161513a1f4}} 
+\index{Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}!Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}}
+\index{Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}!Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}}
+\subsubsection{\texorpdfstring{Charger\+Forme\+C\+O\+R\+Segment()}{ChargerFormeCORSegment()}}
+{\footnotesize\ttfamily Charger\+Forme\+C\+O\+R\+Segment\+::\+Charger\+Forme\+C\+O\+R\+Segment (\begin{DoxyParamCaption}\item[{\hyperlink{class_charger_forme_c_o_r}{Charger\+Forme\+C\+OR} $\ast$}]{suivant }\end{DoxyParamCaption})}
+
+
+
+Constructeur à partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em suivant} & Pointeur sur l\textquotesingle{}expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_charger_forme_c_o_r_segment_a88fc3dc3d1e4fb196246f5105965e285}\label{class_charger_forme_c_o_r_segment_a88fc3dc3d1e4fb196246f5105965e285}} 
+\index{Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}!get\+Type\+Forme@{get\+Type\+Forme}}
+\index{get\+Type\+Forme@{get\+Type\+Forme}!Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}}
+\subsubsection{\texorpdfstring{get\+Type\+Forme()}{getTypeForme()}}
+{\footnotesize\ttfamily const string Charger\+Forme\+C\+O\+R\+Segment\+::get\+Type\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne le type de la forme que l\textquotesingle{}expert peut traiter (ici un segment) 
+
+\begin{DoxyReturn}{Returns}
+string Type de la forme 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_charger_forme_c_o_r_ae740eabcd9b3cc3809c1fe5ffd0100a1}{Charger\+Forme\+C\+OR}.
+
+\mbox{\Hypertarget{class_charger_forme_c_o_r_segment_ac7998f4a2669a3f88dc0b204af187780}\label{class_charger_forme_c_o_r_segment_ac7998f4a2669a3f88dc0b204af187780}} 
+\index{Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}!traiter\+Demande@{traiter\+Demande}}
+\index{traiter\+Demande@{traiter\+Demande}!Charger\+Forme\+C\+O\+R\+Segment@{Charger\+Forme\+C\+O\+R\+Segment}}
+\subsubsection{\texorpdfstring{traiter\+Demande()}{traiterDemande()}}
+{\footnotesize\ttfamily \hyperlink{class_forme}{Forme} $\ast$ Charger\+Forme\+C\+O\+R\+Segment\+::traiter\+Demande (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info\+Forme} & Chaine de caractères correspondant aux données de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Forme$\ast$ Un pointeur sur la forme 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_charger_forme_c_o_r_a1d9563c3a1ff9d6d86aa87a83bdaf8da}{Charger\+Forme\+C\+OR}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_charger_forme_c_o_r_segment_8h}{Charger\+Forme\+C\+O\+R\+Segment.\+h}\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_charger_forme_c_o_r_segment_8cpp}{Charger\+Forme\+C\+O\+R\+Segment.\+cpp}\end{DoxyCompactItemize}

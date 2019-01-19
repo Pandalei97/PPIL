@@ -1,0 +1,71 @@
+\hypertarget{_vecteur2_d_8h}{}\section{C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\+Vecteur2D.h File Reference}
+\label{_vecteur2_d_8h}\index{C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\+Vecteur2\+D.\+h@{C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\+Vecteur2\+D.\+h}}
+
+
+Un vecteur ici est un point, c\textquotesingle{}est une couple des réels (x,y) dans un plan, représente un point dans une forme.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vecteur2_d}{Vecteur2D}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\const T \hyperlink{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}{operator-\/} (const T \&u, const T \&v)
+\begin{DoxyCompactList}\small\item\em Définit le template de l\textquotesingle{}operateur -\/. \end{DoxyCompactList}\item 
+const \hyperlink{class_vecteur2_d}{Vecteur2D} \hyperlink{_vecteur2_d_8h_addf12cd4214262d15cbf605a720ad5af}{operator$\ast$} (const double a, const \hyperlink{class_vecteur2_d}{Vecteur2D} \&v)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}effectuer l\textquotesingle{}opération \char`\"{}reel $\ast$ Vecteur\char`\"{} avec une surcharge de l\textquotesingle{}opérateur $\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Un vecteur ici est un point, c\textquotesingle{}est une couple des réels (x,y) dans un plan, représente un point dans une forme. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_vecteur2_d_8h_addf12cd4214262d15cbf605a720ad5af}\label{_vecteur2_d_8h_addf12cd4214262d15cbf605a720ad5af}} 
+\index{Vecteur2\+D.\+h@{Vecteur2\+D.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vecteur2\+D.\+h@{Vecteur2\+D.\+h}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const \hyperlink{class_vecteur2_d}{Vecteur2D} operator$\ast$ (\begin{DoxyParamCaption}\item[{const double}]{a,  }\item[{const \hyperlink{class_vecteur2_d}{Vecteur2D} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permet d\textquotesingle{}effectuer l\textquotesingle{}opération \char`\"{}reel $\ast$ Vecteur\char`\"{} avec une surcharge de l\textquotesingle{}opérateur $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \hyperlink{class_vecteur2_d}{Vecteur2D} \\
+\hline
+{\em a} & Réel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un \hyperlink{class_vecteur2_d}{Vecteur2D} résultat de l\textquotesingle{}opération. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}\label{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}} 
+\index{Vecteur2\+D.\+h@{Vecteur2\+D.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vecteur2\+D.\+h@{Vecteur2\+D.\+h}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T operator-\/ (\begin{DoxyParamCaption}\item[{const T \&}]{u,  }\item[{const T \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Définit le template de l\textquotesingle{}operateur -\/. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & u. \\
+\hline
+{\em T} & v. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+u + (-\/v). 
+\end{DoxyReturn}

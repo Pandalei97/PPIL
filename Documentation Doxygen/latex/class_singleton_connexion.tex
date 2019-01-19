@@ -1,0 +1,107 @@
+\hypertarget{class_singleton_connexion}{}\section{Singleton\+Connexion Class Reference}
+\label{class_singleton_connexion}\index{Singleton\+Connexion@{Singleton\+Connexion}}
+
+
+{\ttfamily \#include $<$Singleton\+Connexion.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_singleton_connexion_ad050c458fa21b5292d982b8ca265fec0}{initialiser\+Connexion} ()
+\begin{DoxyCompactList}\small\item\em Initialise la connexion vers le serveur. \end{DoxyCompactList}\item 
+void \hyperlink{class_singleton_connexion_a700b93e730b6d57f0c249153420dd12b}{fermer\+Connexion} ()
+\begin{DoxyCompactList}\small\item\em Ferme la connexion vers le serveur. \end{DoxyCompactList}\item 
+void \hyperlink{class_singleton_connexion_adf9e4f1c58e72f1b4bd3ed9821356c41}{envoyer\+Requete} (const string \&str)
+\begin{DoxyCompactList}\small\item\em Envoie une requête au serveur. \end{DoxyCompactList}\item 
+bool \hyperlink{class_singleton_connexion_a68501656107c8ab123f8ad386731fec9}{serveur\+A\+Traite\+Requete} ()
+\begin{DoxyCompactList}\small\item\em Teste si une requête a été traitée par le serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_singleton_connexion}{Singleton\+Connexion} $\ast$ \hyperlink{class_singleton_connexion_a58810d15c0a686c4695e1b2373319ab8}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Retourne une instance unique. \end{DoxyCompactList}\item 
+static void \hyperlink{class_singleton_connexion_a185cc5359c9b2e62a47315d0a3cf311c}{kill\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Ferme l\textquotesingle{}instance unique en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_singleton_connexion_adf9e4f1c58e72f1b4bd3ed9821356c41}\label{class_singleton_connexion_adf9e4f1c58e72f1b4bd3ed9821356c41}} 
+\index{Singleton\+Connexion@{Singleton\+Connexion}!envoyer\+Requete@{envoyer\+Requete}}
+\index{envoyer\+Requete@{envoyer\+Requete}!Singleton\+Connexion@{Singleton\+Connexion}}
+\subsubsection{\texorpdfstring{envoyer\+Requete()}{envoyerRequete()}}
+{\footnotesize\ttfamily void Singleton\+Connexion\+::envoyer\+Requete (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Envoie une requête au serveur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & La chaine de caractère à envoyer au serveur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_singleton_connexion_a700b93e730b6d57f0c249153420dd12b}\label{class_singleton_connexion_a700b93e730b6d57f0c249153420dd12b}} 
+\index{Singleton\+Connexion@{Singleton\+Connexion}!fermer\+Connexion@{fermer\+Connexion}}
+\index{fermer\+Connexion@{fermer\+Connexion}!Singleton\+Connexion@{Singleton\+Connexion}}
+\subsubsection{\texorpdfstring{fermer\+Connexion()}{fermerConnexion()}}
+{\footnotesize\ttfamily void Singleton\+Connexion\+::fermer\+Connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ferme la connexion vers le serveur. 
+
+\mbox{\Hypertarget{class_singleton_connexion_a58810d15c0a686c4695e1b2373319ab8}\label{class_singleton_connexion_a58810d15c0a686c4695e1b2373319ab8}} 
+\index{Singleton\+Connexion@{Singleton\+Connexion}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Singleton\+Connexion@{Singleton\+Connexion}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \hyperlink{class_singleton_connexion}{Singleton\+Connexion} $\ast$ Singleton\+Connexion\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne une instance unique. 
+
+Va créer l\textquotesingle{}instance si celle-\/ci n\textquotesingle{}existe pas ou bien juste la retourner dans le cas contraire \begin{DoxyReturn}{Returns}
+Singleton\+Connexion$\ast$ Pointeur sur l\textquotesingle{}instance unique 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_singleton_connexion_ad050c458fa21b5292d982b8ca265fec0}\label{class_singleton_connexion_ad050c458fa21b5292d982b8ca265fec0}} 
+\index{Singleton\+Connexion@{Singleton\+Connexion}!initialiser\+Connexion@{initialiser\+Connexion}}
+\index{initialiser\+Connexion@{initialiser\+Connexion}!Singleton\+Connexion@{Singleton\+Connexion}}
+\subsubsection{\texorpdfstring{initialiser\+Connexion()}{initialiserConnexion()}}
+{\footnotesize\ttfamily bool Singleton\+Connexion\+::initialiser\+Connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise la connexion vers le serveur. 
+
+\begin{DoxyReturn}{Returns}
+bool Booléen vrai si la connexion est réussie, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_singleton_connexion_a185cc5359c9b2e62a47315d0a3cf311c}\label{class_singleton_connexion_a185cc5359c9b2e62a47315d0a3cf311c}} 
+\index{Singleton\+Connexion@{Singleton\+Connexion}!kill\+Instance@{kill\+Instance}}
+\index{kill\+Instance@{kill\+Instance}!Singleton\+Connexion@{Singleton\+Connexion}}
+\subsubsection{\texorpdfstring{kill\+Instance()}{killInstance()}}
+{\footnotesize\ttfamily void Singleton\+Connexion\+::kill\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ferme l\textquotesingle{}instance unique en cours. 
+
+\mbox{\Hypertarget{class_singleton_connexion_a68501656107c8ab123f8ad386731fec9}\label{class_singleton_connexion_a68501656107c8ab123f8ad386731fec9}} 
+\index{Singleton\+Connexion@{Singleton\+Connexion}!serveur\+A\+Traite\+Requete@{serveur\+A\+Traite\+Requete}}
+\index{serveur\+A\+Traite\+Requete@{serveur\+A\+Traite\+Requete}!Singleton\+Connexion@{Singleton\+Connexion}}
+\subsubsection{\texorpdfstring{serveur\+A\+Traite\+Requete()}{serveurATraiteRequete()}}
+{\footnotesize\ttfamily bool Singleton\+Connexion\+::serveur\+A\+Traite\+Requete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Teste si une requête a été traitée par le serveur. 
+
+\begin{DoxyReturn}{Returns}
+bool Booléen vrai si la requête a été traitée, faux sinon 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_singleton_connexion_8h}{Singleton\+Connexion.\+h}\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_singleton_connexion_8cpp}{Singleton\+Connexion.\+cpp}\end{DoxyCompactItemize}

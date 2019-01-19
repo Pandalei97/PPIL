@@ -1,0 +1,149 @@
+\hypertarget{class_charger_forme_c_o_r}{}\section{Charger\+Forme\+C\+OR Class Reference}
+\label{class_charger_forme_c_o_r}\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+
+
+{\ttfamily \#include $<$Charger\+Forme\+C\+O\+R.\+h$>$}
+
+Inheritance diagram for Charger\+Forme\+C\+OR\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.836066cm]{class_charger_forme_c_o_r}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_charger_forme_c_o_r_a95609cb9640074329ce2ff8ac22d622f}{Charger\+Forme\+C\+OR} (\hyperlink{class_charger_forme_c_o_r}{Charger\+Forme\+C\+OR} $\ast$suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. \end{DoxyCompactList}\item 
+\hyperlink{class_forme}{Forme} $\ast$ \hyperlink{class_charger_forme_c_o_r_aa40ed5e3df01527bcaaf61c5bb56bd65}{charger} (const string \&id\+Forme, const string \&info=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Appelle un expert pour charger la forme, si l\textquotesingle{}expert ne sait pas résoudre le problème alors on passe à l\textquotesingle{}expert suivant \textbackslash{} param id\+Forme Chaine de cractère correspondant à l\textquotesingle{}identifiant de la forme à charger. \end{DoxyCompactList}\item 
+virtual const string \hyperlink{class_charger_forme_c_o_r_ae740eabcd9b3cc3809c1fe5ffd0100a1}{get\+Type\+Forme} () const =0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui retourne le type de la forme. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_forme}{Forme} $\ast$ \hyperlink{class_charger_forme_c_o_r_a1d9563c3a1ff9d6d86aa87a83bdaf8da}{traiter\+Demande} (const string \&info\+Forme) const =0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure. Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_charger_forme_c_o_r_a582e95ff92f06d2c45e6c46f09151e36}{get\+Info\+Forme} (const string \&id\+Forme) const
+\begin{DoxyCompactList}\small\item\em Récupère les informations d\textquotesingle{}une forme en fonction de son identifiant. \end{DoxyCompactList}\item 
+\hyperlink{class_vecteur2_d}{Vecteur2D} \hyperlink{class_charger_forme_c_o_r_a5b1cd8aabcc803143234a7034047a62b}{string\+To\+Point} (const string \&info\+Point) const
+\begin{DoxyCompactList}\small\item\em Convertion d\textquotesingle{}une chaine de caractères correspondant à un point en un \hyperlink{class_vecteur2_d}{Vecteur2D}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_charger_forme_c_o_r_a95609cb9640074329ce2ff8ac22d622f}\label{class_charger_forme_c_o_r_a95609cb9640074329ce2ff8ac22d622f}} 
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\subsubsection{\texorpdfstring{Charger\+Forme\+C\+O\+R()}{ChargerFormeCOR()}}
+{\footnotesize\ttfamily Charger\+Forme\+C\+O\+R\+::\+Charger\+Forme\+C\+OR (\begin{DoxyParamCaption}\item[{\hyperlink{class_charger_forme_c_o_r}{Charger\+Forme\+C\+OR} $\ast$}]{suivant }\end{DoxyParamCaption})}
+
+
+
+Constructeur à partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em suivant} & Pointeur sur l\textquotesingle{}expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_charger_forme_c_o_r_aa40ed5e3df01527bcaaf61c5bb56bd65}\label{class_charger_forme_c_o_r_aa40ed5e3df01527bcaaf61c5bb56bd65}} 
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!charger@{charger}}
+\index{charger@{charger}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\subsubsection{\texorpdfstring{charger()}{charger()}}
+{\footnotesize\ttfamily \hyperlink{class_forme}{Forme} $\ast$ Charger\+Forme\+C\+O\+R\+::charger (\begin{DoxyParamCaption}\item[{const string \&}]{id\+Forme,  }\item[{const string \&}]{info = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelle un expert pour charger la forme, si l\textquotesingle{}expert ne sait pas résoudre le problème alors on passe à l\textquotesingle{}expert suivant \textbackslash{} param id\+Forme Chaine de cractère correspondant à l\textquotesingle{}identifiant de la forme à charger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Chaine de caractère contenant les informations de la forme à charger (vide par défaut) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Forme$\ast$ Pointeur sur la forme chargée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_charger_forme_a0564f02729aa97751342d399e8914a87}{Charger\+Forme}.
+
+\mbox{\Hypertarget{class_charger_forme_c_o_r_a582e95ff92f06d2c45e6c46f09151e36}\label{class_charger_forme_c_o_r_a582e95ff92f06d2c45e6c46f09151e36}} 
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!get\+Info\+Forme@{get\+Info\+Forme}}
+\index{get\+Info\+Forme@{get\+Info\+Forme}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\subsubsection{\texorpdfstring{get\+Info\+Forme()}{getInfoForme()}}
+{\footnotesize\ttfamily string Charger\+Forme\+C\+O\+R\+::get\+Info\+Forme (\begin{DoxyParamCaption}\item[{const string \&}]{id\+Forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Récupère les informations d\textquotesingle{}une forme en fonction de son identifiant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Forme} & Identifiant de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Informations de la forme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_charger_forme_c_o_r_ae740eabcd9b3cc3809c1fe5ffd0100a1}\label{class_charger_forme_c_o_r_ae740eabcd9b3cc3809c1fe5ffd0100a1}} 
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!get\+Type\+Forme@{get\+Type\+Forme}}
+\index{get\+Type\+Forme@{get\+Type\+Forme}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\subsubsection{\texorpdfstring{get\+Type\+Forme()}{getTypeForme()}}
+{\footnotesize\ttfamily virtual const string Charger\+Forme\+C\+O\+R\+::get\+Type\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode virtuelle pure qui retourne le type de la forme. 
+
+\begin{DoxyReturn}{Returns}
+string Type de la forme 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_charger_forme_c_o_r_cercle_a4ca5a036a26641c2636d376f51659172}{Charger\+Forme\+C\+O\+R\+Cercle}, \hyperlink{class_charger_forme_c_o_r_groupe_a202dfd1ec95bc7a20daeb66a92452a11}{Charger\+Forme\+C\+O\+R\+Groupe}, \hyperlink{class_charger_forme_c_o_r_polygone_a8e702295e28572dc41020965255b847a}{Charger\+Forme\+C\+O\+R\+Polygone}, \hyperlink{class_charger_forme_c_o_r_segment_a88fc3dc3d1e4fb196246f5105965e285}{Charger\+Forme\+C\+O\+R\+Segment}, and \hyperlink{class_charger_forme_c_o_r_triangle_a7a0271b76c6abea8c67be2c920d72925}{Charger\+Forme\+C\+O\+R\+Triangle}.
+
+\mbox{\Hypertarget{class_charger_forme_c_o_r_a5b1cd8aabcc803143234a7034047a62b}\label{class_charger_forme_c_o_r_a5b1cd8aabcc803143234a7034047a62b}} 
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!string\+To\+Point@{string\+To\+Point}}
+\index{string\+To\+Point@{string\+To\+Point}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\subsubsection{\texorpdfstring{string\+To\+Point()}{stringToPoint()}}
+{\footnotesize\ttfamily \hyperlink{class_vecteur2_d}{Vecteur2D} Charger\+Forme\+C\+O\+R\+::string\+To\+Point (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Convertion d\textquotesingle{}une chaine de caractères correspondant à un point en un \hyperlink{class_vecteur2_d}{Vecteur2D}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_vecteur2_d}{Vecteur2D} Point converti depuis une chaine de caractères 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_charger_forme_c_o_r_a1d9563c3a1ff9d6d86aa87a83bdaf8da}\label{class_charger_forme_c_o_r_a1d9563c3a1ff9d6d86aa87a83bdaf8da}} 
+\index{Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}!traiter\+Demande@{traiter\+Demande}}
+\index{traiter\+Demande@{traiter\+Demande}!Charger\+Forme\+C\+OR@{Charger\+Forme\+C\+OR}}
+\subsubsection{\texorpdfstring{traiter\+Demande()}{traiterDemande()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_forme}{Forme}$\ast$ Charger\+Forme\+C\+O\+R\+::traiter\+Demande (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode virtuelle pure. Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info\+Forme} & Chaine de caractères correspondant aux données de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Forme$\ast$ Un pointeur sur la forme 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_charger_forme_c_o_r_cercle_ad65cbf0176ef4a65b44c5782646e45fa}{Charger\+Forme\+C\+O\+R\+Cercle}, \hyperlink{class_charger_forme_c_o_r_groupe_ab28f5a9e7a8fe306c98aa3f1f8b775e4}{Charger\+Forme\+C\+O\+R\+Groupe}, \hyperlink{class_charger_forme_c_o_r_polygone_a4ce89ecdaa400d4930743a8e7204b5f2}{Charger\+Forme\+C\+O\+R\+Polygone}, \hyperlink{class_charger_forme_c_o_r_segment_ac7998f4a2669a3f88dc0b204af187780}{Charger\+Forme\+C\+O\+R\+Segment}, and \hyperlink{class_charger_forme_c_o_r_triangle_aaa2b1605bb747f29a559f966754237a2}{Charger\+Forme\+C\+O\+R\+Triangle}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_charger_forme_c_o_r_8h}{Charger\+Forme\+C\+O\+R.\+h}\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_charger_forme_c_o_r_8cpp}{Charger\+Forme\+C\+O\+R.\+cpp}\end{DoxyCompactItemize}

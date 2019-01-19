@@ -1,0 +1,227 @@
+\hypertarget{class_couleur}{}\section{Couleur Class Reference}
+\label{class_couleur}\index{Couleur@{Couleur}}
+
+
+{\ttfamily \#include $<$Couleur.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_couleur_a687a457edb08b51dbcd0299bb0b6a882}{Couleur} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+\hyperlink{class_couleur_a3875e178605e5a425a473b9034f796b3}{Couleur} (const string \&nom\+Couleur)
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d\textquotesingle{}une chaine de caractères. \end{DoxyCompactList}\item 
+\hyperlink{class_couleur_ae5694f3994756524981394433bbdc85f}{Couleur} (const \hyperlink{class_couleur}{Couleur} \&couleur)
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_couleur_ad3be30be83649bc5db48ef46b592aec2}{$\sim$\+Couleur} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+bool \hyperlink{class_couleur_ab426fe44e27a92cf0faf8fee1e086a5f}{contains} (string nom\+Couleur)
+\begin{DoxyCompactList}\small\item\em Teste si une couleur existe. \end{DoxyCompactList}\item 
+const string \& \hyperlink{class_couleur_a0e38cc8477e1618b317124ab372c3501}{get\+Nom\+Couleur} () const
+\begin{DoxyCompactList}\small\item\em Getter pour récupérer la couleur. \end{DoxyCompactList}\item 
+void \hyperlink{class_couleur_a571f1d6faacd4ee99f0180400ccb259d}{set\+Nom\+Couleur} (const string \&nom\+Couleur)
+\begin{DoxyCompactList}\small\item\em Setter pour modifier la couleur. \end{DoxyCompactList}\item 
+\hyperlink{class_couleur_acff55563e5760e4cea32ca275eb62205}{operator string} () const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur pour convertir une couleur en string. \end{DoxyCompactList}\item 
+bool \hyperlink{class_couleur_a159c6c550e8855d6a44765ab5e0b0de8}{operator==} (const \hyperlink{class_couleur}{Couleur} \&objet) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur == pour comparer deux couleurs. \end{DoxyCompactList}\item 
+bool \hyperlink{class_couleur_a90eb18d425c9cd6a42814abb34c11183}{operator!=} (const \hyperlink{class_couleur}{Couleur} \&objet) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur != pour comparer deux couleurs, on utilise ==. \end{DoxyCompactList}\item 
+const \hyperlink{class_couleur}{Couleur} \hyperlink{class_couleur_af49bf608ba98af5f9dfe19fbe2759000}{operator=} (const \hyperlink{class_couleur}{Couleur} \&couleur)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur = pour affecter les valeurs d\textquotesingle{}une couleur à une autre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_couleur_a8223b4eee2017fdd318d16692a16c636}{operator$<$$<$} (ostream \&flux, const \hyperlink{class_couleur}{Couleur} \&coul)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur $<$$<$ pour l\textquotesingle{}affichage des couleurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_couleur_a687a457edb08b51dbcd0299bb0b6a882}\label{class_couleur_a687a457edb08b51dbcd0299bb0b6a882}} 
+\index{Couleur@{Couleur}!Couleur@{Couleur}}
+\index{Couleur@{Couleur}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{Couleur()}{Couleur()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Couleur\+::\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut d\textquotesingle{}une couleur. 
+
+\mbox{\Hypertarget{class_couleur_a3875e178605e5a425a473b9034f796b3}\label{class_couleur_a3875e178605e5a425a473b9034f796b3}} 
+\index{Couleur@{Couleur}!Couleur@{Couleur}}
+\index{Couleur@{Couleur}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{Couleur()}{Couleur()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Couleur\+::\+Couleur (\begin{DoxyParamCaption}\item[{const string \&}]{nom\+Couleur }\end{DoxyParamCaption})}
+
+
+
+Constructeur à partir d\textquotesingle{}une chaine de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & Une chaine de caractère représentant la couleur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_couleur_ae5694f3994756524981394433bbdc85f}\label{class_couleur_ae5694f3994756524981394433bbdc85f}} 
+\index{Couleur@{Couleur}!Couleur@{Couleur}}
+\index{Couleur@{Couleur}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{Couleur()}{Couleur()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Couleur\+::\+Couleur (\begin{DoxyParamCaption}\item[{const \hyperlink{class_couleur}{Couleur} \&}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Constructeur à partir d\textquotesingle{}une couleur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & Une couleur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_couleur_ad3be30be83649bc5db48ef46b592aec2}\label{class_couleur_ad3be30be83649bc5db48ef46b592aec2}} 
+\index{Couleur@{Couleur}!````~Couleur@{$\sim$\+Couleur}}
+\index{````~Couleur@{$\sim$\+Couleur}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{$\sim$\+Couleur()}{~Couleur()}}
+{\footnotesize\ttfamily Couleur\+::$\sim$\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructeur. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_couleur_ab426fe44e27a92cf0faf8fee1e086a5f}\label{class_couleur_ab426fe44e27a92cf0faf8fee1e086a5f}} 
+\index{Couleur@{Couleur}!contains@{contains}}
+\index{contains@{contains}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool Couleur\+::contains (\begin{DoxyParamCaption}\item[{string}]{nom\+Couleur }\end{DoxyParamCaption})}
+
+
+
+Teste si une couleur existe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & Renvoie vrai si la couleur existe, faux sinon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_couleur_a0e38cc8477e1618b317124ab372c3501}\label{class_couleur_a0e38cc8477e1618b317124ab372c3501}} 
+\index{Couleur@{Couleur}!get\+Nom\+Couleur@{get\+Nom\+Couleur}}
+\index{get\+Nom\+Couleur@{get\+Nom\+Couleur}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{get\+Nom\+Couleur()}{getNomCouleur()}}
+{\footnotesize\ttfamily const string \& Couleur\+::get\+Nom\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter pour récupérer la couleur. 
+
+\begin{DoxyReturn}{Returns}
+string Une chaine de caractère correspondant à la couleur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_couleur_acff55563e5760e4cea32ca275eb62205}\label{class_couleur_acff55563e5760e4cea32ca275eb62205}} 
+\index{Couleur@{Couleur}!operator string@{operator string}}
+\index{operator string@{operator string}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Couleur\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur pour convertir une couleur en string. 
+
+C\+Onversion d\textquotesingle{}une couleur en chaine de caractères \mbox{\Hypertarget{class_couleur_a90eb18d425c9cd6a42814abb34c11183}\label{class_couleur_a90eb18d425c9cd6a42814abb34c11183}} 
+\index{Couleur@{Couleur}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Couleur\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_couleur}{Couleur} \&}]{objet }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur != pour comparer deux couleurs, on utilise ==. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objet} & La couleur à comparer \\
+\hline
+{\em y} & Réel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_couleur_af49bf608ba98af5f9dfe19fbe2759000}\label{class_couleur_af49bf608ba98af5f9dfe19fbe2759000}} 
+\index{Couleur@{Couleur}!operator=@{operator=}}
+\index{operator=@{operator=}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \hyperlink{class_couleur}{Couleur} Couleur\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_couleur}{Couleur} \&}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur = pour affecter les valeurs d\textquotesingle{}une couleur à une autre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & La couleur à affecter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coulur Objet constant de la couleur qui a été affectée 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_couleur_a159c6c550e8855d6a44765ab5e0b0de8}\label{class_couleur_a159c6c550e8855d6a44765ab5e0b0de8}} 
+\index{Couleur@{Couleur}!operator==@{operator==}}
+\index{operator==@{operator==}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Couleur\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_couleur}{Couleur} \&}]{objet }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur == pour comparer deux couleurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objet} & La couleur à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Un booléen vrai si les deux couleurs dont identiques, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_couleur_a571f1d6faacd4ee99f0180400ccb259d}\label{class_couleur_a571f1d6faacd4ee99f0180400ccb259d}} 
+\index{Couleur@{Couleur}!set\+Nom\+Couleur@{set\+Nom\+Couleur}}
+\index{set\+Nom\+Couleur@{set\+Nom\+Couleur}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{set\+Nom\+Couleur()}{setNomCouleur()}}
+{\footnotesize\ttfamily void Couleur\+::set\+Nom\+Couleur (\begin{DoxyParamCaption}\item[{const string \&}]{nom\+Couleur }\end{DoxyParamCaption})}
+
+
+
+Setter pour modifier la couleur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & Une chaine de caractère correspondant à la couleur à modifier \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_couleur_a8223b4eee2017fdd318d16692a16c636}\label{class_couleur_a8223b4eee2017fdd318d16692a16c636}} 
+\index{Couleur@{Couleur}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Couleur@{Couleur}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{flux,  }\item[{const \hyperlink{class_couleur}{Couleur} \&}]{coul }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur $<$$<$ pour l\textquotesingle{}affichage des couleurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flux} & Le flux de sortie \\
+\hline
+{\em coul} & La couleur à afficher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream Le flux de sortie 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_couleur_8h}{Couleur.\+h}\item 
+C\+:/\+Users/\+Quentin Fixe/\+Desktop/\+P\+P\+I\+L-\/master/\+C\+L\+I\+E\+N\+T/\hyperlink{_couleur_8cpp}{Couleur.\+cpp}\end{DoxyCompactItemize}
