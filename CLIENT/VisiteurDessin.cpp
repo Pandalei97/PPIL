@@ -65,7 +65,7 @@ void VisiteurDessin::visite(const Segment* s) const {
 	ostringstream infoForme;
 	infoForme << "D$" <<"Segment:" << s->getCouleur() << ";" << s->getPO() << ";" << s->getPE() << ";";
 
-	//try {
+	try {
 		//Connexion si la forme est indépendante
 		if(!s->estMarquee())
 			SingletonConnexion::getInstance()->initialiserConnexion();
@@ -79,10 +79,10 @@ void VisiteurDessin::visite(const Segment* s) const {
 		}
 		
 
-	//}
-	//catch (Exception e) {
-	//	cerr << e << endl;
-	//}
+	}
+	catch (Exception e) {
+		cerr << e << endl;
+	}
 	
 }
 void VisiteurDessin::visite(const Cercle* c) const {

@@ -130,6 +130,15 @@ public:
 	*/
 	ostream & print(ostream & flux) const;
 
+	/**
+	* \brief Appelle la méthode visite du visiteur de sauvegarde correpondant au groupe
+	* \param v Pointeur sur le visiteur de sauvegarde
+	*/
 	void accepteSauvegarder(const VisiteurSauvTXT *v)const;
+
+	/**
+	* \brief Appelle la méthode visite du visiteur de dessins correpondant au groupe
+	* \param v Pointeur sur le visiteur de dessin
+	*/
 	void dessiner(const VisiteurDessin *v)const;
 };

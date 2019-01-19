@@ -10,7 +10,15 @@ class COR {
 private:
 	ChargerForme *chargeurForme;
 	static COR* instance;
+	
+	/**
+	* \brief Constructeur par défaut privé 
+	*/
 	COR();
+
+	/**
+	* \brief Destructeur privé
+	*/
 	~COR();
 
 public:

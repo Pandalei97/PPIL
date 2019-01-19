@@ -148,6 +148,15 @@ public:
 	*/
 	friend ostream & operator << (ostream & flux, const Forme& forme);
 
+	/**
+	* \brief Appelle la méthode visite du visiteur de sauvegarde correpondant à la forme
+	* \param v Pointeur sur le visiteur de sauvegarde
+	*/
 	virtual void accepteSauvegarder(const VisiteurSauvTXT *v)const = 0;
+
+	/**
+	* \brief Appelle la méthode visite du visiteur de dessin correpondant à la forme
+	* \param v Pointeur sur le visiteur de dessin
+	*/
 	virtual void dessiner(const VisiteurDessin *v)const = 0;
 };
